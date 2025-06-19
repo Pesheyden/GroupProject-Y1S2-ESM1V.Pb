@@ -19,7 +19,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _rotationSpeed;
     [SerializeField] private Vector2 _rotationBarriers;
     [SerializeField] private FloatVariable _moveInput;
-    [SerializeField] private AnimationCurve _linearDampingCurve;
+    [SerializeField] private AnimationCurve _angleLinearDampingCurve;
+    [SerializeField] private AnimationCurve _speedLinearDampingCurve;
+    [SerializeField] private float _maxSpeed;
     [SerializeField] private bool _inverseForward;
     
     private Rigidbody _rigidbody;
@@ -77,8 +79,9 @@ public class PlayerMovement : MonoBehaviour
             y -= 270;
             t = y / 90;
         }
+        Debug.Log(_rigidbody.linearVelocity.sqrMagnitude);
         
-        _rigidbody.linearDamping = _linearDampingCurve.Evaluate(t);
+        _rigidbody.linearDamping = _angleLinearDampingCurve.Evaluate(t) + _speedLinearDampingCurve.Evaluate(_rigidbody.linearVelocity.sqrMagnitude/_maxSpeed);
     }
 
     private void Move()
