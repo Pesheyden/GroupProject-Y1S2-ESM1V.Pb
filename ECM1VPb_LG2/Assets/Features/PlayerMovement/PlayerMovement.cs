@@ -17,12 +17,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Axis _forwardAxis;
     [SerializeField] private float _speed;
     [SerializeField] private float _rotationSpeed;
-    [SerializeField] private Vector2 _rotationBarriers;
     [SerializeField] private FloatVariable _moveInput;
     [SerializeField] private AnimationCurve _angleLinearDampingCurve;
     [SerializeField] private AnimationCurve _speedLinearDampingCurve;
     [SerializeField] private float _maxSpeed;
-    [SerializeField] private bool _inverseForward;
+    [SerializeField] private float _knockBackMultiplier;
+    
+    private bool _inverseForward;
+    public bool _isCanMove;
     
     private Rigidbody _rigidbody;
     private Vector3 _forwardDirection;
@@ -30,19 +32,17 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        CalculateForwardDirection();
-    }
-
-    private void CalculateForwardDirection()
-    {
-        
+        _isCanMove = true;
     }
 
     public void FixedUpdate()
     {
+        
         Rotate();
         CalculateLinearDamping();
-        Move();
+        
+        if(_isCanMove)
+            Move();
     }
     
     private void Rotate()
@@ -79,7 +79,6 @@ public class PlayerMovement : MonoBehaviour
             y -= 270;
             t = y / 90;
         }
-        Debug.Log(_rigidbody.linearVelocity.sqrMagnitude);
         
         _rigidbody.linearDamping = _angleLinearDampingCurve.Evaluate(t) + _speedLinearDampingCurve.Evaluate(_rigidbody.linearVelocity.sqrMagnitude/_maxSpeed);
     }
@@ -103,5 +102,28 @@ public class PlayerMovement : MonoBehaviour
         
         if (_rigidbody.linearVelocity.sqrMagnitude < 0.05f)
             _inverseForward = !_inverseForward;
+    }
+
+    public void Stop()
+    {
+        _rigidbody.linearVelocity = -_rigidbody.linearVelocity * _knockBackMultiplier;
+        _isCanMove = false;
+    }
+    public void Stop(float duration)
+    {
+        Debug.Log("Stop");
+        _rigidbody.linearVelocity = -_rigidbody.linearVelocity * _knockBackMultiplier ;
+        _isCanMove = false;
+        Invoke(nameof(ContinueMovement), duration);
+    }
+
+    public void ContinueMovement()
+    {
+        _isCanMove = true;
+    }
+
+    public void SpeedUp(float multiplier)
+    {
+        _rigidbody.linearVelocity *= multiplier;
     }
 }

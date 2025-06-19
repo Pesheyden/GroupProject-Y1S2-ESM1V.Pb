@@ -161,39 +161,73 @@ MonoBehaviour:
   _rotationBarriers: {x: 0, y: 0}
   _moveInput:
     VariableSo: {fileID: 11400000, guid: 7f66790082bbf8f459ecf4b1ab309df7, type: 2}
-  _linearDampingCurve:
+  _angleLinearDampingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.005554199
+      value: 0.0031738281
+      inSlope: -0.0058882
+      outSlope: -0.0058882
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.27095073
+    - serializedVersion: 3
+      time: 0.8360879
+      value: 0.32133552
+      inSlope: 1.2895057
+      outSlope: 1.2895057
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2.8952365
+      outSlope: 2.8952365
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.041899405
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _speedLinearDampingCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.056478437
-      outSlope: 0.056478437
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 1
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.8135402
-      value: 0.0671288
-      inSlope: 0.16013996
-      outSlope: 0.16013996
+      time: 0.9933299
+      value: 0.0030197091
+      inSlope: -0.009536624
+      outSlope: -0.009536624
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.2917518
+      inWeight: 0.37429678
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.9911957
-      value: 0.30184937
-      inSlope: 1.318188
-      outSlope: 1.318188
+      time: 1.0055575
+      value: 1.006348
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.09888539
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _maxSpeed: 100
   _inverseForward: 0
 --- !u!54 &2019520980072545360
 Rigidbody:
