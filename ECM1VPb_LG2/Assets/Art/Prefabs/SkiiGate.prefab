@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1772824975436330702}
   - component: {fileID: 7887361714471791624}
+  - component: {fileID: -4702580167327255113}
   m_Layer: 0
   m_Name: SkiiGate
   m_TagString: Untagged
@@ -54,6 +55,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0692307, y: 3.6139402, z: 0.1399799}
   m_Center: {x: -0.50034994, y: 1.8041732, z: 0.000000029802322}
+--- !u!114 &-4702580167327255113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2362722599057429979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba09259cbfe34604a8ccb3b089a0596c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _multiplier: 1.2
 --- !u!1001 &7926238150070920862
 PrefabInstance:
   m_ObjectHideFlags: 0
