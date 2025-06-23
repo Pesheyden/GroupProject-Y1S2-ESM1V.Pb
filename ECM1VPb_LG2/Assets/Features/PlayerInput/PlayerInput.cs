@@ -31,6 +31,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private RectTransform _joyStick;
     [SerializeField] private RectTransform _joyStickKnob;
     [SerializeField] private Rect _joystickArea;
+    [SerializeField] private RectTransform _joystickBlock;
+    [SerializeField] private RectTransform _secondBlockAdjustment;
 
 
 
@@ -62,11 +64,16 @@ public class PlayerInput : MonoBehaviour
                 Input.simulateMouseWithTouches = false;
                 _joyStickSize = _joyStick.sizeDelta;
                 _joyStick.gameObject.SetActive(true);
+                _joystickArea = _joystickBlock.rect;
+
                 break;
             case InputType.FloatingJoystick:
                 _fingerId = -1;
                 Input.simulateMouseWithTouches = true;
                 _joyStickSize = _joyStick.sizeDelta;
+                _joystickArea = _joystickBlock.rect;
+                if(_secondBlockAdjustment)
+                    _joystickArea = new Rect(_joystickBlock.rect.x, _joystickBlock.rect.y, _secondBlockAdjustment.rect.width + _joystickBlock.rect.width, _secondBlockAdjustment.rect.width + _joystickBlock.rect.width);
                 break;
             case InputType.Slider:
                 Input.simulateMouseWithTouches = true;
