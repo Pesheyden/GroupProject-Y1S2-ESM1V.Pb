@@ -111,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Stop(float duration)
     {
-        Debug.Log("Stop");
         _rigidbody.linearVelocity = -_rigidbody.linearVelocity * _knockBackMultiplier ;
         _isCanMove = false;
         Invoke(nameof(ContinueMovement), duration);

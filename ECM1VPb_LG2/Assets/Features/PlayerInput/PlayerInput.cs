@@ -65,6 +65,9 @@ public class PlayerInput : MonoBehaviour
                 _joyStickSize = _joyStick.sizeDelta;
                 _joyStick.gameObject.SetActive(true);
                 _joystickArea = _joystickBlock.rect;
+                _joystickArea.position = Vector2.zero;
+                if(_secondBlockAdjustment)
+                    _joystickArea = new Rect(_joystickArea.x + _secondBlockAdjustment.rect.width, _joystickArea.y,  _joystickBlock.rect.width,  _joystickBlock.rect.height);
 
                 break;
             case InputType.FloatingJoystick:
@@ -72,8 +75,9 @@ public class PlayerInput : MonoBehaviour
                 Input.simulateMouseWithTouches = true;
                 _joyStickSize = _joyStick.sizeDelta;
                 _joystickArea = _joystickBlock.rect;
+                _joystickArea.position = Vector2.zero;
                 if(_secondBlockAdjustment)
-                    _joystickArea = new Rect(_joystickBlock.rect.x, _joystickBlock.rect.y, _secondBlockAdjustment.rect.width + _joystickBlock.rect.width, _secondBlockAdjustment.rect.width + _joystickBlock.rect.width);
+                    _joystickArea = new Rect(_joystickArea.x + _secondBlockAdjustment.rect.width, _joystickArea.y,  _joystickBlock.rect.width,  _joystickBlock.rect.height);
                 break;
             case InputType.Slider:
                 Input.simulateMouseWithTouches = true;
@@ -81,6 +85,7 @@ public class PlayerInput : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        Debug.Log(_joystickArea.position + " " + _joystickArea.size);
     }
 
     void Update()
@@ -158,9 +163,11 @@ public class PlayerInput : MonoBehaviour
                 break;
             case TouchPhase.Ended:
                 _moveInput.Value = 0;
+                _fingerId = -1;
                 break;
             case TouchPhase.Canceled:
                 _moveInput.Value = 0;
+                _fingerId = -1;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -190,6 +197,7 @@ public class PlayerInput : MonoBehaviour
                     currentTouch = touch;
                     _fingerId = currentTouch.fingerId;
                     found = true;
+                    Debug.Log("Is in area " + touch.position + "; " + _joystickArea.position+ ", " + _joystickArea.size);
                     break;
                 }
             }
@@ -208,9 +216,10 @@ public class PlayerInput : MonoBehaviour
                 }
             }
 
-            if(!found)
-                return;
+
         }
+        if(!found)
+            return;
         
         switch (currentTouch.phase)
         {
@@ -226,10 +235,12 @@ public class PlayerInput : MonoBehaviour
             case TouchPhase.Ended:
                 _moveInput.Value = 0;
                 DespawnJoystick(currentTouch, _joyStick, _joyStickKnob);
+                _fingerId = -1;
                 break;
             case TouchPhase.Canceled:
                 _moveInput.Value = 0;
                 DespawnJoystick(currentTouch, _joyStick, _joyStickKnob);
+                _fingerId = -1;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -238,6 +249,7 @@ public class PlayerInput : MonoBehaviour
 
     private void SpawnJoystick(Touch touch, RectTransform joystick, RectTransform joystickKnob)
     {
+        Debug.Log(touch.position + " at " + _joystickArea.position);
         if(!IsPositionInsideTheArea(touch.position, _joystickArea))
             return;
         
@@ -247,9 +259,10 @@ public class PlayerInput : MonoBehaviour
 
     private Vector2 ClampJoystickPosition(Vector2 position)
     {
+        position -= _joystickArea.position;
         return new Vector2(
-            Mathf.Clamp(position.x, _joyStickSize.x / 2 + _joystickArea.x, _joystickArea.x + _joystickArea.width - _joyStickSize.x / 2),
-            Mathf.Clamp(position.y, _joyStickSize.y / 2 + _joystickArea.y, _joystickArea.y + _joystickArea.height - _joyStickSize.y / 2)
+            Mathf.Clamp(position.x, _joyStickSize.x / 2, _joystickArea.width - _joyStickSize.x / 2),
+            Mathf.Clamp(position.y, _joyStickSize.y / 2,  _joystickArea.height - _joyStickSize.y / 2)
         );
     }
 
@@ -261,15 +274,19 @@ public class PlayerInput : MonoBehaviour
 
     private void HandleJoystickKnobMovement(Touch touch, RectTransform joystick, RectTransform joystickKnob)
     {
+        if(!IsPositionInsideTheArea(touch.position, _joystickArea))
+            return;
+        
         Vector2 knobPos;
+        Vector2 touchPosition = touch.position - _joystickArea.position;
         float maxMovement = _joyStickSize.x / 2;
-        if (Vector2.Distance(touch.position, joystick.anchoredPosition) > maxMovement)
+        if (Vector2.Distance(touchPosition, joystick.anchoredPosition) > maxMovement)
         {
-            knobPos = (touch.position - joystick.anchoredPosition).normalized * maxMovement;
+            knobPos = (touchPosition- joystick.anchoredPosition).normalized * maxMovement;
         }
         else
         {
-            knobPos = touch.position - joystick.anchoredPosition;
+            knobPos = touchPosition - joystick.anchoredPosition;
         }
 
         knobPos = new Vector2(knobPos.x, 0);
