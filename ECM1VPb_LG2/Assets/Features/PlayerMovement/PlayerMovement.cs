@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody _rigidbody;
     private Vector3 _forwardDirection;
+    private bool _isSlowdown;
 
     private void Awake()
     {
@@ -37,14 +38,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void FixedUpdate()
     {
-        
         Rotate();
         CalculateLinearDamping();
         
         if(_isCanMove)
             Move();
     }
-    
+
     private void Rotate()
     {
         transform.Rotate(new Vector3(0,1,0),_moveInput.Value * Time.fixedDeltaTime * _rotationSpeed);
@@ -125,5 +125,21 @@ public class PlayerMovement : MonoBehaviour
     public void SpeedUp(float multiplier)
     {
         _rigidbody.linearVelocity *= multiplier;
+    }
+
+    public void StartSlowdown(float multiplier)
+    {
+        if(_isSlowdown)
+            return;
+        _speed *= multiplier;
+        _isSlowdown = true;
+    }
+
+    public void StopSlowdown(float multiplier)
+    {
+        if(!_isSlowdown)
+            return;
+        _speed /= multiplier;
+        _isSlowdown = false;
     }
 }
