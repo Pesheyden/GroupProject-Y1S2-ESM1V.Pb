@@ -29,7 +29,7 @@ public class PowerupController : MonoBehaviour
         }
 
         Debug.Log("Powerup active");
-        Debug.Log("Updated left side coins : " + LeftCoins.Value);
+     
         Debug.Log("Updated right side coins : " + RightCoins.Value);
     }
 
