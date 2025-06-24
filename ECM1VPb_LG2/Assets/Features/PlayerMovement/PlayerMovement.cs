@@ -126,4 +126,16 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody.linearVelocity *= multiplier;
     }
+
+    public void StartSlowdown(float multiplier)
+    {
+        Debug.Log("Start");
+        _speed *= multiplier;
+    }
+
+    public void StopSlowdown(float multiplier)
+    {
+        Debug.Log("stop");
+        _speed /= multiplier;
+    }
 }

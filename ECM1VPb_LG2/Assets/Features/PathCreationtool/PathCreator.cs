@@ -6,21 +6,11 @@ using NaughtyAttributes;
 using UnityEngine.Rendering;
 using Random = UnityEngine.Random;
 
-[ExecuteInEditMode]
+[ExecuteInEditMode] [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class PathCreator : MonoBehaviour
 {
     [SerializeField] private float _baseWidth = 2;
     [SerializeField] private bool _stopGeneration = false;
-    [SerializeField] private List<Vector3> _debug;
-
-
-    private Mesh _fixedMesh;
-
-    private void Awake()
-    {
-        //Destroy(this);
-    }
-
 
     private void Update()
     {
@@ -42,36 +32,19 @@ public class PathCreator : MonoBehaviour
 
         //Create Mesh
         Mesh mesh = new Mesh();
-        
 
         List<Vector3> verticesList = new();
         List<Vector2> uvList = new();
-
         List<int> trianglesList = new();
-
         verticesList.Add(points[0].localPosition + -points[0].right * points[0].localScale.x * _baseWidth);
         verticesList.Add(points[0].localPosition + points[0].right * points[0].localScale.x * _baseWidth);
 
-
         int lastStartIndex = 0;
-        
         for (int i = 1; i < points.Count; i++)
         {
             //Create vertices 
             verticesList.Add(points[i].localPosition + -points[i].right * points[i].localScale.x * _baseWidth);
             verticesList.Add(points[i].localPosition + points[i].right * points[i].localScale.x * _baseWidth);
-
-            //Create UV
-            // if (i % 2 > 0)
-            // {
-            //     uvList.Add(new Vector2(0, 0));
-            //     uvList.Add(new Vector2(0, 1));
-            // }
-            // else
-            // {
-            //     uvList.Add(new Vector2(1, 0));
-            //     uvList.Add(new Vector2(1, 1));
-            // }
             
             //Create Triangles
             trianglesList.Add(lastStartIndex + 1);
@@ -85,7 +58,7 @@ public class PathCreator : MonoBehaviour
             lastStartIndex = verticesList.Count - 2;
         }
 
-
+        //Get min and max points of the mesh
         float minX = verticesList[0].x;
         float minZ = verticesList[0].z;
         float maxX = verticesList[0].x;
@@ -105,14 +78,13 @@ public class PathCreator : MonoBehaviour
         maxX -= minX;
         maxZ -= minZ;
         
+        //Add uvs
         foreach (var vertice in verticesList)
         {
             float x = (vertice.x - minX) / maxX;
             float z = (vertice.z - minZ) / maxZ;
             uvList.Add(new Vector2(x,z));
         }
-
-        _debug = verticesList;
         
         mesh.vertices = verticesList.ToArray();
         mesh.uv = uvList.ToArray();
@@ -142,11 +114,31 @@ public class PathCreator : MonoBehaviour
             var boxCollider = child.AddComponent<BoxCollider>();
             child.transform.position = collidersParent.position + (mesh.vertices[i] + mesh.vertices[i - 2]) / 2;
             boxCollider.size = (Vector3)_baseSize + new Vector3(0,0,Vector3.Distance(mesh.vertices[i], mesh.vertices[i - 2]));
+            if (i % 2 == 0)
+            {
+                child.transform.position += Vector3.left * boxCollider.size.x / 2; }
+
+            else
+            {
+                child.transform.position += Vector3.right * boxCollider.size.x / 2;
+            }
+
+
 
             child.transform.eulerAngles = new Vector3
                 (0,
                     mesh.vertices[i-2].x - mesh.vertices[i].x > 0 ? Vector3.Angle(transform.forward, mesh.vertices[i-2] - mesh.vertices[i]) : -Vector3.Angle(transform.forward, mesh.vertices[i-2] - mesh.vertices[i]),
                 0);
         }
+    }
+
+    [EnableIf("_stopGeneration")]
+    [Button]
+    public void ChangeAllCollidersTriggerStatus()
+    {
+        var children = gameObject.GetComponentsInChildren<Collider>();
+        bool status = !children[0].isTrigger;
+        foreach (var child in children)
+            child.isTrigger = status;
     }
 }
