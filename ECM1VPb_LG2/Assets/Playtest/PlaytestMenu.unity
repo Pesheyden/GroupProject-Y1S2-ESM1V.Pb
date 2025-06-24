@@ -423,6 +423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 530377223}
+  - component: {fileID: 530377224}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -451,6 +452,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &530377224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530377222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c333f6594c90d478fb5ef574952ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &620734387
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +682,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 724627365}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 530377224}
+        m_TargetAssemblyTypeName: PlaytestMenuManager, Assembly-CSharp
+        m_MethodName: StartPlaytestV2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &724627365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,7 +1486,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1176179697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 530377224}
+        m_TargetAssemblyTypeName: PlaytestMenuManager, Assembly-CSharp
+        m_MethodName: StartPlaytestV4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1176179697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1582,7 +1619,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1228538236}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 530377224}
+        m_TargetAssemblyTypeName: PlaytestMenuManager, Assembly-CSharp
+        m_MethodName: StartPlaytestV3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1228538236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,7 +1752,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1344260250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 530377224}
+        m_TargetAssemblyTypeName: PlaytestMenuManager, Assembly-CSharp
+        m_MethodName: StartPlaytestV1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1344260250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2071,7 +2132,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2024999927}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 530377224}
+        m_TargetAssemblyTypeName: PlaytestMenuManager, Assembly-CSharp
+        m_MethodName: ExitGamePlaytest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2024999927
 MonoBehaviour:
   m_ObjectHideFlags: 0
