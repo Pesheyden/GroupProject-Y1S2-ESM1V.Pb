@@ -8,9 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Demo.unity
     guid: e6bda4adcf5dc07458ffcc4d94ac3ca8
+  - enabled: 1
+    path: Assets/Features/HelperScripts/TestScenes/MainMenu_TestScene.unity
+    guid: ff9f70c92dc77ed4b8c46f4dedf2dbba
+  - enabled: 1
+    path: Assets/Features/Collectables/Scenes/Collectables_TestScene.unity
+    guid: b2dca2498b934bd48b4743dd34f7f796
+  - enabled: 1
+    path: Assets/Features/HelperScripts/TestScenes/SceneWithIndexTwo_TestScene.unity
+    guid: 6348c4cb6ba434f489a0a9f0284561c5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
