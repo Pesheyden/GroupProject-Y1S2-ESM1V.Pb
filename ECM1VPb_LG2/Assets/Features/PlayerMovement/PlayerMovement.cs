@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody _rigidbody;
     private Vector3 _forwardDirection;
+    private bool _isSlowdown;
 
     private void Awake()
     {
@@ -129,13 +130,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void StartSlowdown(float multiplier)
     {
-        Debug.Log("Start");
+        if(_isSlowdown)
+            return;
         _speed *= multiplier;
+        _isSlowdown = true;
     }
 
     public void StopSlowdown(float multiplier)
     {
-        Debug.Log("stop");
+        if(!_isSlowdown)
+            return;
         _speed /= multiplier;
+        _isSlowdown = false;
     }
 }
