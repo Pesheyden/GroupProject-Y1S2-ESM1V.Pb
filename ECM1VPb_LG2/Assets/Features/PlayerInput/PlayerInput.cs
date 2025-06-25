@@ -29,8 +29,13 @@ public class PlayerInput : MonoBehaviour
 
     [Header("Joystick")] 
     [SerializeField] private RectTransform _joyStick;
+    [SerializeField] private RectTransform _floatingJoyStick;
     [SerializeField] private RectTransform _joyStickKnob;
+    [SerializeField] private RectTransform _floatingJoyStickKnob;
     [SerializeField] private Rect _joystickArea;
+    [SerializeField] private RectTransform _joystickBlock;
+    [SerializeField] private RectTransform _secondBlockAdjustment;
+    [SerializeField] private bool _isPortrait;
 
 
 
@@ -62,11 +67,28 @@ public class PlayerInput : MonoBehaviour
                 Input.simulateMouseWithTouches = false;
                 _joyStickSize = _joyStick.sizeDelta;
                 _joyStick.gameObject.SetActive(true);
+                _joystickArea = _joystickBlock.rect;
+                _joystickArea.position = Vector2.zero;
+                if (_secondBlockAdjustment)
+                    _joystickArea = new Rect(
+                        !_isPortrait ? _joystickArea.x + _secondBlockAdjustment.rect.width : _joystickArea.x,
+                        _isPortrait ? _joystickArea.y + _secondBlockAdjustment.rect.height : _joystickArea.y,
+                        _joystickBlock.rect.width,
+                        _joystickBlock.rect.height);
+
                 break;
             case InputType.FloatingJoystick:
                 _fingerId = -1;
                 Input.simulateMouseWithTouches = true;
-                _joyStickSize = _joyStick.sizeDelta;
+                _joyStickSize = _floatingJoyStick.sizeDelta;
+                _joystickArea = _joystickBlock.rect;
+                _joystickArea.position = Vector2.zero;
+                if (_secondBlockAdjustment)
+                    _joystickArea = new Rect(
+                        !_isPortrait ? _joystickArea.x + _secondBlockAdjustment.rect.width : _joystickArea.x,
+                        _isPortrait ? _joystickArea.y + _secondBlockAdjustment.rect.height : _joystickArea.y,
+                        _joystickBlock.rect.width,
+                        _joystickBlock.rect.height);
                 break;
             case InputType.Slider:
                 Input.simulateMouseWithTouches = true;
@@ -74,6 +96,7 @@ public class PlayerInput : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        Debug.Log(_joystickArea.position + " " + _joystickArea.size);
     }
 
     void Update()
@@ -151,9 +174,11 @@ public class PlayerInput : MonoBehaviour
                 break;
             case TouchPhase.Ended:
                 _moveInput.Value = 0;
+                _fingerId = -1;
                 break;
             case TouchPhase.Canceled:
                 _moveInput.Value = 0;
+                _fingerId = -1;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -183,6 +208,7 @@ public class PlayerInput : MonoBehaviour
                     currentTouch = touch;
                     _fingerId = currentTouch.fingerId;
                     found = true;
+                    Debug.Log("Is in area " + touch.position + "; " + _joystickArea.position+ ", " + _joystickArea.size);
                     break;
                 }
             }
@@ -201,28 +227,31 @@ public class PlayerInput : MonoBehaviour
                 }
             }
 
-            if(!found)
-                return;
+
         }
+        if(!found)
+            return;
         
         switch (currentTouch.phase)
         {
             case TouchPhase.Began:
                 _fingerId = currentTouch.fingerId;
-                SpawnJoystick(currentTouch, _joyStick, _joyStickKnob);
+                SpawnJoystick(currentTouch, _floatingJoyStick, _floatingJoyStickKnob);
                 break;
             case TouchPhase.Moved:
-                HandleJoystickKnobMovement(currentTouch, _joyStick, _joyStickKnob);
+                HandleloatingJoystickKnobMovement(currentTouch, _floatingJoyStick, _floatingJoyStickKnob);
                 break;
             case TouchPhase.Stationary:
                 break;
             case TouchPhase.Ended:
                 _moveInput.Value = 0;
-                DespawnJoystick(currentTouch, _joyStick, _joyStickKnob);
+                DespawnJoystick(currentTouch, _floatingJoyStick, _floatingJoyStickKnob);
+                _fingerId = -1;
                 break;
             case TouchPhase.Canceled:
                 _moveInput.Value = 0;
-                DespawnJoystick(currentTouch, _joyStick, _joyStickKnob);
+                DespawnJoystick(currentTouch, _floatingJoyStick, _floatingJoyStickKnob);
+                _fingerId = -1;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -231,6 +260,7 @@ public class PlayerInput : MonoBehaviour
 
     private void SpawnJoystick(Touch touch, RectTransform joystick, RectTransform joystickKnob)
     {
+        Debug.Log(touch.position + " at " + _joystickArea.position);
         if(!IsPositionInsideTheArea(touch.position, _joystickArea))
             return;
         
@@ -240,9 +270,10 @@ public class PlayerInput : MonoBehaviour
 
     private Vector2 ClampJoystickPosition(Vector2 position)
     {
+        position -= _joystickArea.position;
         return new Vector2(
-            Mathf.Clamp(position.x, _joyStickSize.x / 2 + _joystickArea.x, _joystickArea.x + _joystickArea.width - _joyStickSize.x / 2),
-            Mathf.Clamp(position.y, _joyStickSize.y / 2 + _joystickArea.y, _joystickArea.y + _joystickArea.height - _joyStickSize.y / 2)
+            Mathf.Clamp(position.x, _joyStickSize.x / 2, _joystickArea.width - _joyStickSize.x / 2),
+            Mathf.Clamp(position.y, _joyStickSize.y / 2,  _joystickArea.height - _joyStickSize.y / 2)
         );
     }
 
@@ -252,20 +283,56 @@ public class PlayerInput : MonoBehaviour
         joystick.gameObject.SetActive(false);
     }
 
-    private void HandleJoystickKnobMovement(Touch touch, RectTransform joystick, RectTransform joystickKnob)
+    private void HandleloatingJoystickKnobMovement(Touch touch, RectTransform joystick, RectTransform joystickKnob)
     {
+        if(!IsPositionInsideTheArea(touch.position, _joystickArea))
+            return;
+
+        Debug.Log("Move");
         Vector2 knobPos;
+        Vector2 touchPosition = touch.position - _joystickArea.position;
+        Debug.Log(touchPosition);
         float maxMovement = _joyStickSize.x / 2;
-        if (Vector2.Distance(touch.position, joystick.anchoredPosition) > maxMovement)
+        if (Vector2.Distance(touchPosition, joystick.anchoredPosition) > maxMovement)
         {
-            knobPos = (touch.position - joystick.anchoredPosition).normalized * maxMovement;
+            knobPos = (touchPosition- joystick.anchoredPosition).normalized * maxMovement;
         }
         else
         {
-            knobPos = touch.position - joystick.anchoredPosition;
+            knobPos = touchPosition - joystick.anchoredPosition;
         }
 
         knobPos = new Vector2(knobPos.x, 0);
+        Debug.Log(knobPos);
+        joystickKnob.anchoredPosition = knobPos;
+        _moveInput.Value = knobPos.x / maxMovement;
+        if (_reverseInput)
+            _moveInput.Value *= -1;
+    }
+
+    private void HandleJoystickKnobMovement(Touch touch, RectTransform joystick, RectTransform joystickKnob)
+    {
+        if (!IsPositionInsideTheArea(touch.position, _joystickArea))
+            return;
+
+        Debug.Log("Move");
+        Vector2 knobPos;
+        Vector2 touchPosition = touch.position - _joystickArea.position;
+        Debug.Log(touchPosition);
+        float maxMovement = _joyStickSize.x / 2;
+        if (Vector2.Distance(touchPosition, joystick.anchoredPosition) > maxMovement)
+        {
+            knobPos = (touchPosition - joystick.anchoredPosition).normalized * maxMovement;
+            Debug.Log("1 " +joystick.anchoredPosition + "," + maxMovement);
+        }
+        else
+        {
+            knobPos = touchPosition - joystick.anchoredPosition;
+            Debug.Log(2);
+        }
+
+        knobPos = new Vector2(knobPos.x, 0);
+        Debug.Log(knobPos);
         joystickKnob.anchoredPosition = knobPos;
         _moveInput.Value = knobPos.x / maxMovement;
         if (_reverseInput)
