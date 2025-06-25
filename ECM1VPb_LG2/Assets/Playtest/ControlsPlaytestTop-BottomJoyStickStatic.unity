@@ -1494,6 +1494,78 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &294621114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294621115}
+  - component: {fileID: 294621117}
+  - component: {fileID: 294621116}
+  m_Layer: 5
+  m_Name: Knob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &294621115
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294621114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 929554470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &294621116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294621114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 2df415d17953dc346a487955b3b30df2, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &294621117
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294621114}
+  m_CullTransparentMesh: 1
 --- !u!1001 &302926870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2022,7 +2094,6 @@ GameObject:
   - component: {fileID: 441722206}
   - component: {fileID: 441722205}
   - component: {fileID: 441722204}
-  - component: {fileID: 441722203}
   - component: {fileID: 441722202}
   m_Layer: 0
   m_Name: Main Camera Player 2
@@ -2075,14 +2146,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &441722203
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441722201}
-  m_Enabled: 1
 --- !u!20 &441722204
 Camera:
   m_ObjectHideFlags: 0
@@ -2660,6 +2723,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3119732820420764956, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: m_Name
+      value: JoyStickFloat
+      objectReference: {fileID: 0}
     - target: {fileID: 3497620388142310514, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -2717,13 +2784,33 @@ PrefabInstance:
       value: -1016
       objectReference: {fileID: 0}
     - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _joyStick
+      value: 
+      objectReference: {fileID: 889336124}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: _inputType
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _joyStickKnob
+      value: 
+      objectReference: {fileID: 1756556779}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _joystickBlock
+      value: 
+      objectReference: {fileID: 581934913}
     - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: _joystickArea.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _floatingJoyStick
+      value: 
+      objectReference: {fileID: 581934912}
     - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: _moveInput.VariableSo
       value: 
@@ -2822,11 +2909,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538133119308785750, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7305124639220388794, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 889336124}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6891964631394882955, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       insertIndex: -1
@@ -2863,6 +2953,16 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!224 &581934912 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7069943545046029832, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+  m_PrefabInstance: {fileID: 581934909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &581934913 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7305124639220388794, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+  m_PrefabInstance: {fileID: 581934909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &583921960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3585,6 +3685,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ca04b7a1d70d6d4d83f5fe45d6c3c17, type: 3}
+--- !u!1 &889336123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 889336124}
+  - component: {fileID: 889336126}
+  - component: {fileID: 889336125}
+  m_Layer: 5
+  m_Name: JoyStick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &889336124
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889336123}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0008726532}
+  m_LocalScale: {x: 0.5019666, y: 0.5019666, z: 0.5019666}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1756556779}
+  m_Father: {fileID: 581934913}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 593.49994, y: 200}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &889336125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889336123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 134e2c5913501cc4b8399b2d3c465066, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &889336126
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889336123}
+  m_CullTransparentMesh: 1
 --- !u!1001 &891090098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3647,6 +3820,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 77618648752314871, guid: fcfc2e76b393bc74b96052c16e81c65d, type: 3}
   m_PrefabInstance: {fileID: 1350724907}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &929554469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929554470}
+  - component: {fileID: 929554472}
+  - component: {fileID: 929554471}
+  m_Layer: 5
+  m_Name: JoyStick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &929554470
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929554469}
+  m_LocalRotation: {x: 0.000000014901159, y: -0.0000018030403, z: -1, w: -0.000000029802319}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0003480224}
+  m_LocalScale: {x: 0.5019666, y: 0.5019666, z: 0.5019666}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 294621115}
+  m_Father: {fileID: 1305135695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 576.5, y: 1066}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &929554471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929554469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 134e2c5913501cc4b8399b2d3c465066, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &929554472
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929554469}
+  m_CullTransparentMesh: 1
 --- !u!4 &977525837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 77618648752314871, guid: fcfc2e76b393bc74b96052c16e81c65d, type: 3}
@@ -4505,7 +4751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1101532798011272091, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1101532798011272091, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4517,7 +4763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1101532798011272091, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1101532798011272091, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4529,7 +4775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1101532798011272091, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2730046280462208795, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_Color.b
@@ -4566,6 +4812,10 @@ PrefabInstance:
     - target: {fileID: 2894862657475476036, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119732820420764956, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: m_Name
+      value: JoyStickFloat
       objectReference: {fileID: 0}
     - target: {fileID: 3497620388142310514, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4616,9 +4866,29 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _joyStick
+      value: 
+      objectReference: {fileID: 929554470}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: _inputType
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _isPortrait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _joyStickKnob
+      value: 
+      objectReference: {fileID: 294621115}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _reverseInput
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _joystickBlock
+      value: 
+      objectReference: {fileID: 1305135695}
     - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: _joystickArea.x
       value: 0
@@ -4628,9 +4898,17 @@ PrefabInstance:
       value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _floatingJoyStick
+      value: 
+      objectReference: {fileID: 1305135694}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: _moveInput.VariableSo
       value: 
       objectReference: {fileID: 11400000, guid: 0f0fca9487bec5f4c9cb809c58c5c72a, type: 2}
+    - target: {fileID: 4031042161135096041, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      propertyPath: _secondBlockAdjustment
+      value: 
+      objectReference: {fileID: 581934913}
     - target: {fileID: 4460860971978925822, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4729,11 +5007,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538133119308785750, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7305124639220388794, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 929554470}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6891964631394882955, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       insertIndex: -1
@@ -4770,6 +5051,16 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!224 &1305135694 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7069943545046029832, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+  m_PrefabInstance: {fileID: 1305135691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1305135695 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7305124639220388794, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
+  m_PrefabInstance: {fileID: 1305135691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1307557627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6347426357811872647, guid: 5ca04b7a1d70d6d4d83f5fe45d6c3c17, type: 3}
@@ -6425,6 +6716,78 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcfc2e76b393bc74b96052c16e81c65d, type: 3}
+--- !u!1 &1756556778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1756556779}
+  - component: {fileID: 1756556781}
+  - component: {fileID: 1756556780}
+  m_Layer: 5
+  m_Name: Knob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1756556779
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756556778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 889336124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1756556780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756556778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 2df415d17953dc346a487955b3b30df2, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1756556781
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756556778}
+  m_CullTransparentMesh: 1
 --- !u!4 &1807570160 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1339813978381862949, guid: 4ac2e2f9019a8ff43b6b953b69d76df5, type: 3}
