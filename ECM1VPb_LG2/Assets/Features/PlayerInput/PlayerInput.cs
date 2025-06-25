@@ -96,7 +96,6 @@ public class PlayerInput : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        Debug.Log(_joystickArea.position + " " + _joystickArea.size);
     }
 
     void Update()
@@ -110,7 +109,6 @@ public class PlayerInput : MonoBehaviour
                 return;
             case InputType.InvisibleButton:
                 return;
-                break;
             case InputType.Joystick:
                 HandleJoystickInput();
                 break;
@@ -208,7 +206,6 @@ public class PlayerInput : MonoBehaviour
                     currentTouch = touch;
                     _fingerId = currentTouch.fingerId;
                     found = true;
-                    Debug.Log("Is in area " + touch.position + "; " + _joystickArea.position+ ", " + _joystickArea.size);
                     break;
                 }
             }
@@ -260,7 +257,6 @@ public class PlayerInput : MonoBehaviour
 
     private void SpawnJoystick(Touch touch, RectTransform joystick, RectTransform joystickKnob)
     {
-        Debug.Log(touch.position + " at " + _joystickArea.position);
         if(!IsPositionInsideTheArea(touch.position, _joystickArea))
             return;
         
@@ -287,11 +283,9 @@ public class PlayerInput : MonoBehaviour
     {
         if(!IsPositionInsideTheArea(touch.position, _joystickArea))
             return;
-
-        Debug.Log("Move");
+        
         Vector2 knobPos;
         Vector2 touchPosition = touch.position - _joystickArea.position;
-        Debug.Log(touchPosition);
         float maxMovement = _joyStickSize.x / 2;
         if (Vector2.Distance(touchPosition, joystick.anchoredPosition) > maxMovement)
         {
@@ -303,7 +297,6 @@ public class PlayerInput : MonoBehaviour
         }
 
         knobPos = new Vector2(knobPos.x, 0);
-        Debug.Log(knobPos);
         joystickKnob.anchoredPosition = knobPos;
         _moveInput.Value = knobPos.x / maxMovement;
         if (_reverseInput)
@@ -314,25 +307,20 @@ public class PlayerInput : MonoBehaviour
     {
         if (!IsPositionInsideTheArea(touch.position, _joystickArea))
             return;
-
-        Debug.Log("Move");
+        
         Vector2 knobPos;
         Vector2 touchPosition = touch.position - _joystickArea.position;
-        Debug.Log(touchPosition);
         float maxMovement = _joyStickSize.x / 2;
         if (Vector2.Distance(touchPosition, joystick.anchoredPosition) > maxMovement)
         {
             knobPos = (touchPosition - joystick.anchoredPosition).normalized * maxMovement;
-            Debug.Log("1 " +joystick.anchoredPosition + "," + maxMovement);
         }
         else
         {
             knobPos = touchPosition - joystick.anchoredPosition;
-            Debug.Log(2);
         }
 
         knobPos = new Vector2(knobPos.x, 0);
-        Debug.Log(knobPos);
         joystickKnob.anchoredPosition = knobPos;
         _moveInput.Value = knobPos.x / maxMovement;
         if (_reverseInput)

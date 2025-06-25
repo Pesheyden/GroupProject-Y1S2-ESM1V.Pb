@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,10 +7,23 @@ public class SnowmanPowerup : MonoBehaviour
     public Transform SecondPlayerTransform;
     public GameObject SnowmanPrefab;
     public float DistanceFromPlayer = 2f;
+    [SerializeField] private Axis _forwardAxis;
 
-    public PowerupController PowerupControllerInstance;
+    public Vector3 DirectionVector;
 
-    public Vector3 DirectionVector = new Vector3(0, 0, 1);
+    private void Awake()
+    {
+        DirectionVector = _forwardAxis switch
+        {
+            Axis.x => new Vector3(1, 0, 0),
+            Axis.y => new Vector3(0, 1, 0),
+            Axis.z => new Vector3(0, 0, 1),
+            Axis.rx => new Vector3(-1, 0, 0),
+            Axis.ry => new Vector3(0, -1, 0),
+            Axis.rz => new Vector3(0, 0, -1),
+            _ => throw new ArgumentOutOfRangeException()
+        };
+    }
 
     private void Start()
     {
@@ -25,7 +39,7 @@ public class SnowmanPowerup : MonoBehaviour
     {
         if (SecondPlayerTransform != null && SnowmanPrefab != null)
         {
-            Vector3 spawnPosition = SecondPlayerTransform.position + SecondPlayerTransform.forward * DistanceFromPlayer;
+            Vector3 spawnPosition = SecondPlayerTransform.position + DirectionVector * DistanceFromPlayer;
             Instantiate(SnowmanPrefab, spawnPosition, Quaternion.identity);
         }
     }

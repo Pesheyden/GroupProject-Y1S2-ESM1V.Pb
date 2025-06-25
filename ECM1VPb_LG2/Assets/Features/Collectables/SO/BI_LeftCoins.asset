@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159ee0dad531a95469211f8bb641e03c, type: 3}
   m_Name: BI_LeftCoins
   m_EditorClassIdentifier: 
-  _value: 12
+  _value: 0
   DebugMode: 0
-  _reset: 0
+  _reset: 1

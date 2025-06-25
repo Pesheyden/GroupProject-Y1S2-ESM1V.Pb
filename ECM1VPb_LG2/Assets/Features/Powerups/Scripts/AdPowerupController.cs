@@ -3,10 +3,6 @@ using UnityEngine.UI;
 
 public class AdPowerupController : MonoBehaviour
 {
-    public RawImage AdImage;
-    public GameObject CloseAdButtonGameObject;
-    public GameObject AdditionalAdButtonGameObject;
-
     public GameObject FirstAdGameObject;
     public GameObject SecondAdGameObject;
     public GameObject ThirdAdGameObject;

@@ -5,12 +5,9 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    
-    public GameObject CollectableGameObject;
-
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<PlayerTest>().Coins.Value++;
+        other.transform.parent.GetComponent<PlayerController>().Coins.Value++;
     }
 }
 
