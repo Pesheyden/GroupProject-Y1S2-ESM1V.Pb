@@ -61,7 +61,8 @@ public class StoryScroller : MonoBehaviour
     {
         _storyBlocks[_nextBlockIndex].SetActive(true);
         _storyBlocks[_nextBlockIndex].GetComponent<Animation>()?.Play();
-        _audioSource.PlayOneShot(_storyAudioBlocks[_nextBlockIndex]);
+        if (_storyAudioBlocks[_nextBlockIndex])
+            _audioSource.PlayOneShot(_storyAudioBlocks[_nextBlockIndex]);
 
         if (_nextBlockIndex == _storyBlocks.Length - 1)
         {
