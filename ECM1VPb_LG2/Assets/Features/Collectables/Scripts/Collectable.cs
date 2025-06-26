@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using BSOAP.Variables;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.Networking.PlayerConnection;
 
 public class Collectable : MonoBehaviour
 {
@@ -13,6 +14,6 @@ public class Collectable : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         FMODUnity.RuntimeManager.CreateInstance(Parameter).start();
-        other.GetComponent<PlayerTest>().Coins.Value++;
+        other.transform.parent.GetComponent<PlayerController>().Coins.Value++;
     }
 }
