@@ -12,14 +12,26 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo.unity
     guid: e6bda4adcf5dc07458ffcc4d94ac3ca8
   - enabled: 1
-    path: Assets/Features/HelperScripts/TestScenes/MainMenu_TestScene.unity
-    guid: ff9f70c92dc77ed4b8c46f4dedf2dbba
+    path: Assets/Playtest/PlaytestMenu.unity
+    guid: 0d932f9305b56b94c800ab03219ea3d6
   - enabled: 1
-    path: Assets/Features/Collectables/Scenes/Collectables_TestScene.unity
-    guid: b2dca2498b934bd48b4743dd34f7f796
+    path: Assets/Playtest/ControlsPlaytestTop-BottomButtons.unity
+    guid: 0370c2a945ace6d4390ff4c17d644ace
   - enabled: 1
-    path: Assets/Features/HelperScripts/TestScenes/SceneWithIndexTwo_TestScene.unity
-    guid: 6348c4cb6ba434f489a0a9f0284561c5
+    path: Assets/Playtest/ControlsPlaytestTop-BottomButtonsInvis.unity
+    guid: 81b690a96c24f274cb82f3e07cf2eddd
+  - enabled: 1
+    path: Assets/Playtest/ControlsPlaytestTop-BottomJoyStickFloat.unity
+    guid: e23903e06fc8eb146b8ce15167460161
+  - enabled: 1
+    path: Assets/Playtest/ControlsPlaytestLeft-RightButtons.unity
+    guid: a5f4b9827531ad844ab3de595a2684ef
+  - enabled: 1
+    path: Assets/Playtest/ControlsPlaytestLeft-RightButtonsInvis.unity
+    guid: 6c8df390b018b4c44965a00c27ca37b4
+  - enabled: 1
+    path: Assets/Playtest/ControlsPlaytestLeft-RightJoyStickFloat.unity
+    guid: dd71194b3349cd443897d9d8028389a4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

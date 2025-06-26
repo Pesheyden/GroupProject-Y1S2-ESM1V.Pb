@@ -3,17 +3,17 @@ using UnityEngine.UI;
 
 public class AdPowerupController : MonoBehaviour
 {
-    public RawImage AdImage;
-    public GameObject CloseAdButtonGameObject;
-    public GameObject AdditionalAdButtonGameObject;
-
     public GameObject FirstAdGameObject;
     public GameObject SecondAdGameObject;
     public GameObject ThirdAdGameObject;
 
+    public string OpenParameter;
+    public string CloseParameter;
+
     public void ActivateAnAd()
     {
         FirstAdGameObject.SetActive(true);
+        FMODUnity.RuntimeManager.CreateInstance(OpenParameter).start();
         
     }
 
@@ -21,6 +21,7 @@ public class AdPowerupController : MonoBehaviour
     {
         if (FirstAdGameObject == true)
         {
+            FMODUnity.RuntimeManager.CreateInstance(OpenParameter).start();
             SecondAdGameObject.SetActive(true);
         }
     }
@@ -29,6 +30,7 @@ public class AdPowerupController : MonoBehaviour
     {
         if (SecondAdGameObject == true)
         {
+            FMODUnity.RuntimeManager.CreateInstance(OpenParameter).start();
             ThirdAdGameObject.SetActive(true);
         }
     }
@@ -36,14 +38,17 @@ public class AdPowerupController : MonoBehaviour
     public void DisableFirstAd()
     {
         FirstAdGameObject.SetActive(false);
+        FMODUnity.RuntimeManager.CreateInstance(CloseParameter).start();
     }
 
     public void DisableSecondAd() {
         SecondAdGameObject.SetActive(false);
+        FMODUnity.RuntimeManager.CreateInstance(CloseParameter).start();
     }
 
     public void DisableThirdAd()
     {
         ThirdAdGameObject.SetActive(false);
+        FMODUnity.RuntimeManager.CreateInstance(CloseParameter).start();
     }
 }

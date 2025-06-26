@@ -112,17 +112,16 @@ public class PathCreator : MonoBehaviour
             child.transform.parent = collidersParent;
             
             var boxCollider = child.AddComponent<BoxCollider>();
-            child.transform.position = collidersParent.position + (mesh.vertices[i] + mesh.vertices[i - 2]) / 2;
+            
             boxCollider.size = (Vector3)_baseSize + new Vector3(0,0,Vector3.Distance(mesh.vertices[i], mesh.vertices[i - 2]));
-            if (i % 2 == 0)
-            {
-                child.transform.position += Vector3.left * boxCollider.size.x / 2; }
 
-            else
-            {
-                child.transform.position += Vector3.right * boxCollider.size.x / 2;
-            }
-
+            Vector3 position =
+                Vector3.Cross(
+                    -Vector3.Cross(mesh.vertices[i - 2] - mesh.vertices[i], mesh.vertices[i - 1] - mesh.vertices[i]),
+                    mesh.vertices[i - 2] - mesh.vertices[i]).normalized * boxCollider.size.x / 2 +
+                collidersParent.position + (mesh.vertices[i - 2] + mesh.vertices[i]) / 2;
+            
+            child.transform.position = position; 
 
 
             child.transform.eulerAngles = new Vector3
