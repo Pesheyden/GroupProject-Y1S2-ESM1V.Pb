@@ -1,5 +1,11 @@
 using UnityEngine;
 using BSOAP.Variables;
+
+public enum Side
+{
+    left,
+    right
+}
 public class PowerupController : MonoBehaviour
 {
     public IntVariable LeftCoins;

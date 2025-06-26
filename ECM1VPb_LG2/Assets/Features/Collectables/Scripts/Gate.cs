@@ -4,11 +4,10 @@ public class Gate : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        PlayerTest _playerInstance = other.GetComponent<PlayerTest>();
+        PlayerController _playerInstance = other.GetComponent<PlayerController>();
 
         if (_playerInstance != null)
         {
-            _playerInstance.GateSpeedBoost();
             Debug.Log("AYO ADD MY FREAKIN SPEEDBOOST MAN");
         }
         else
