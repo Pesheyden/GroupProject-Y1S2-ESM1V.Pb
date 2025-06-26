@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2671418095983185429}
   - component: {fileID: 7485273143684798360}
+  - component: {fileID: 7768959849633550490}
   m_Layer: 0
   m_Name: FinishLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2671418095983185429
 Transform:
@@ -26,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 5327161716496824272}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.59562, y: 1.5, z: -0.56549}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1176605466184202081}
@@ -54,6 +55,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.5205016, y: 3.121626, z: 0.30522537}
   m_Center: {x: -0.0023312569, y: 0.0023314953, z: 0.0023313165}
+--- !u!114 &7768959849633550490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5327161716496824272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da18a0e9ee2bdc4388e1c007d48ece9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  On_TriggerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  On_TriggerStay:
+    m_PersistentCalls:
+      m_Calls: []
+  On_TriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1719984788909871242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424f6ccf2c4a9b94baeb5a62bfa2f013, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.684
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424f6ccf2c4a9b94baeb5a62bfa2f013, type: 3}
       propertyPath: m_LocalPosition.z
@@ -105,6 +127,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 424f6ccf2c4a9b94baeb5a62bfa2f013, type: 3}
       propertyPath: m_Name
       value: finish line
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424f6ccf2c4a9b94baeb5a62bfa2f013, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

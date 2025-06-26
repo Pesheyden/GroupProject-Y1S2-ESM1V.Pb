@@ -9,7 +9,8 @@ public class Obstacle : MonoBehaviour
     {
         if (other.transform.parent.TryGetComponent<PlayerMovement>(out var playerMovement))
         {
-            FMODUnity.RuntimeManager.CreateInstance(Parameter).start();
+            if (Parameter != "")
+                FMODUnity.RuntimeManager.CreateInstance(Parameter).start();
             playerMovement.Stop(_stopTime);
         }
     }

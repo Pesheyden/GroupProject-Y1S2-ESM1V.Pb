@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 364076591140311883}
   - component: {fileID: 6152601063882620736}
+  - component: {fileID: 8675021097664086047}
   m_Layer: 0
   m_Name: Stump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &364076591140311883
 Transform:
@@ -26,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 4097152331741664481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.323, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 736649502791966515}
@@ -53,7 +54,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.0723362, y: 0.6629444, z: 1.1031175}
-  m_Center: {x: 0.00076949596, y: 0.0038476884, z: 0.00076949596}
+  m_Center: {x: 0.00076949596, y: 0.323, z: 0.00076949596}
+--- !u!114 &8675021097664086047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097152331741664481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb1dcdf0f6cd5d4581737fa48d6649b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stopTime: 0
+  Parameter: 
 --- !u!1001 &987312705127807192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68,7 +83,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 47a3df8c8d974e14eaeec007a5e5b978, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.323
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 47a3df8c8d974e14eaeec007a5e5b978, type: 3}
       propertyPath: m_LocalPosition.z
@@ -105,6 +120,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 47a3df8c8d974e14eaeec007a5e5b978, type: 3}
       propertyPath: m_Name
       value: stump
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47a3df8c8d974e14eaeec007a5e5b978, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

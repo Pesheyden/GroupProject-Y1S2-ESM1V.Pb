@@ -18,7 +18,6 @@ public class IceBucketPowerupController : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(1);
         Rigidbody otherRigidbody = other.attachedRigidbody;
 
 
