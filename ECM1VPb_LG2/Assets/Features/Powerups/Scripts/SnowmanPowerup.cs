@@ -11,6 +11,8 @@ public class SnowmanPowerup : MonoBehaviour
 
     public Vector3 DirectionVector = new Vector3(0, 0, 1);
 
+    public string Parameter;
+
     private void Start()
     {
         if (SecondPlayerTransform == null || SnowmanPrefab == null)
@@ -27,6 +29,7 @@ public class SnowmanPowerup : MonoBehaviour
         {
             Vector3 spawnPosition = SecondPlayerTransform.position + SecondPlayerTransform.forward * DistanceFromPlayer;
             Instantiate(SnowmanPrefab, spawnPosition, Quaternion.identity);
+            FMODUnity.RuntimeManager.CreateInstance(Parameter).start();
         }
     }
 }

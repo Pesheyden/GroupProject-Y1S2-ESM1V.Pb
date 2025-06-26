@@ -1,14 +1,18 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OuterPathTrigger : MonoBehaviour
 {
     [SerializeField] private float _speedMultiplier;
+
+    public UnityEvent OnRoughSnowEnter;
+    public UnityEvent OnRoughSnowExit;
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(1);
         if (other.transform.parent.TryGetComponent<PlayerMovement>(out var playerMovement))
         {
+            OnRoughSnowEnter?.Invoke();
             playerMovement.StartSlowdown(_speedMultiplier);
         }
     }
@@ -17,6 +21,7 @@ public class OuterPathTrigger : MonoBehaviour
     {
         if (other.transform.parent.TryGetComponent<PlayerMovement>(out var playerMovement))
         {
+            OnRoughSnowExit?.Invoke();
             playerMovement.StopSlowdown(_speedMultiplier);
         }
     }
