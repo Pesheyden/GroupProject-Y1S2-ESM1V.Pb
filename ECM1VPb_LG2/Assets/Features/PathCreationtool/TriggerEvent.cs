@@ -9,16 +9,16 @@ public class TriggerEvent : MonoBehaviour
     public UnityEvent<Collider> On_TriggerExit;
     private void OnTriggerEnter(Collider other)
     {
-        throw new NotImplementedException();
+        On_TriggerEnter?.Invoke(other);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        throw new NotImplementedException();
+        On_TriggerEnter?.Invoke(other);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        throw new NotImplementedException();
+        On_TriggerEnter?.Invoke(other);
     }
 }
