@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2671418095983185429}
   - component: {fileID: 7485273143684798360}
+  - component: {fileID: 7768959849633550490}
   m_Layer: 0
   m_Name: FinishLine
   m_TagString: Untagged
@@ -54,6 +55,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.5205016, y: 3.121626, z: 0.30522537}
   m_Center: {x: -0.0023312569, y: 0.0023314953, z: 0.0023313165}
+--- !u!114 &7768959849633550490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5327161716496824272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da18a0e9ee2bdc4388e1c007d48ece9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  On_TriggerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  On_TriggerStay:
+    m_PersistentCalls:
+      m_Calls: []
+  On_TriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1719984788909871242
 PrefabInstance:
   m_ObjectHideFlags: 0
