@@ -3,7 +3,12 @@ guid: 80d4692ac959baa4896c18f4e6f4f1d0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Freak
+    second: {fileID: 2100000, guid: 150c735c8f59a0546a9190bd414fa574, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
