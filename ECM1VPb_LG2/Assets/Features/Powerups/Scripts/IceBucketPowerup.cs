@@ -32,7 +32,8 @@ public class IceBucketPowerup : MonoBehaviour
         {
             Vector3 spawnPosition = SecondPlayerTransform.position + DirectionVector * DistanceFromPlayer;
             Instantiate(PlanePrefab, spawnPosition, Quaternion.identity);
-            FMODUnity.RuntimeManager.CreateInstance(Parameter).start();
+            if (Parameter != "")
+                FMODUnity.RuntimeManager.CreateInstance(Parameter).start();
         }
     }
 }

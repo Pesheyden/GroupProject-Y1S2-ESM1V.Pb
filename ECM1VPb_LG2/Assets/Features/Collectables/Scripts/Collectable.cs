@@ -6,7 +6,8 @@ public class Collectable : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        FMODUnity.RuntimeManager.CreateInstance(Parameter).start();
+        if(Parameter != "")
+            FMODUnity.RuntimeManager.CreateInstance(Parameter).start();
         other.transform.parent.GetComponent<PlayerController>().Coins.Value++;
     }
 }
