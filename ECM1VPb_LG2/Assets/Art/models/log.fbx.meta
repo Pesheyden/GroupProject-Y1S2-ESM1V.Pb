@@ -3,7 +3,12 @@ guid: acde45e989066f34dbaea7b7ed69aa45
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stump_log_branch
+    second: {fileID: 2100000, guid: 78f0f30ac28e6bd45af5543263fe2159, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
