@@ -130,7 +130,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(_isSlowdown)
             return;
+        
         _speed *= multiplier;
+        _rigidbody.linearVelocity *= multiplier / 2;
         _isSlowdown = true;
     }
 

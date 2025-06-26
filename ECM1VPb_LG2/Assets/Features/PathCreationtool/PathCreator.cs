@@ -6,7 +6,7 @@ using NaughtyAttributes;
 using UnityEngine.Rendering;
 using Random = UnityEngine.Random;
 
-[ExecuteInEditMode] [RequireComponent(typeof(MeshRenderer))]
+[ExecuteInEditMode] [RequireComponent(typeof(MeshRenderer),typeof(MeshFilter))]
 public class PathCreator : MonoBehaviour
 {
     [SerializeField] private float _baseWidth = 2;

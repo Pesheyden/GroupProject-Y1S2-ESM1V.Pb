@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -2244,7 +2244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -2488,7 +2488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -2877,7 +2877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -3627,7 +3627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5944257131007287241, guid: 634e9e66e242fb848bcbc49c9aecd731, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.463348
+      value: 7.45
       objectReference: {fileID: 0}
     - target: {fileID: 5944257131007287241, guid: 634e9e66e242fb848bcbc49c9aecd731, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3785,7 +3785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -4029,7 +4029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -5135,7 +5135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -5317,7 +5317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -5909,7 +5909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -6267,7 +6267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -6340,7 +6340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -6527,7 +6527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -7087,7 +7087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -7326,7 +7326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -7513,7 +7513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -7586,7 +7586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -7659,7 +7659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -7732,7 +7732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -7976,7 +7976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -8510,7 +8510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -8614,7 +8614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -9834,7 +9834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -10021,7 +10021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -10892,7 +10892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -11042,7 +11042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -11286,7 +11286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -11359,7 +11359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -11810,7 +11810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -11883,7 +11883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -12220,7 +12220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -12381,7 +12381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -12739,7 +12739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -13584,7 +13584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -13771,7 +13771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -13932,7 +13932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -14756,7 +14756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -15973,7 +15973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -16388,7 +16388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -16841,7 +16841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8504922223105998347, guid: 0e980281d0911564492cad368ce209d6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.328419
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: 8504922223105998347, guid: 0e980281d0911564492cad368ce209d6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16942,7 +16942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -17015,7 +17015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -17088,7 +17088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -17161,7 +17161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -17441,7 +17441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c80366069ac3134eace1cde476d394a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.4
+  _speedMultiplier: 0.8
   OnRoughSnowEnter:
     m_PersistentCalls:
       m_Calls: []
