@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &42171694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7111987106979345298, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
-  m_PrefabInstance: {fileID: 6557394985750884532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &143836912
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,11 +416,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &483967208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6899885486914088997, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
-  m_PrefabInstance: {fileID: 6557394985750884532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &638954049
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,6 +681,7 @@ GameObject:
   - component: {fileID: 730057895}
   - component: {fileID: 730057894}
   - component: {fileID: 730057893}
+  - component: {fileID: 730057896}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -772,6 +763,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &730057896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730057892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &950827973
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,12 +933,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea80ad483bef1d749ac14ff9257071ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseSpeed: 10
-  Speed: 10
-  SpeedMultiplier: 5
-  _speedBoostDelay: 2
   Coins:
     VariableSo: {fileID: 11400000, guid: 555f194a697382249b5100e86296c953, type: 2}
+  _powerUpPrices:
+    _keys: 
+    _values: 
+  SnowmanFillImage: {fileID: 0}
+  IceBucketFillImage: {fileID: 0}
+  AdFillImage: {fileID: 0}
+  OnSnowmanPowerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnIceBucketPowerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdPowerUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &950827981
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -946,8 +992,9 @@ MonoBehaviour:
   SecondPlayerTransform: {fileID: 1928512999}
   SnowmanPrefab: {fileID: 8552706382036756616, guid: a84b1ab002247a340b8d06aef8c42bcc, type: 3}
   DistanceFromPlayer: 2
-  PowerupControllerInstance: {fileID: 1261835135}
+  _forwardAxis: 0
   DirectionVector: {x: 0, y: 0, z: 1}
+  Parameter: 
 --- !u!114 &950827983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,6 +1010,9 @@ MonoBehaviour:
   SecondPlayerTransform: {fileID: 1928512999}
   PlanePrefab: {fileID: 7191144532730022063, guid: 6af435cf8d018ef4a8894587fd97dc6f, type: 3}
   DistanceFromPlayer: 5
+  Parameter: 
+  _forwardAxis: 0
+  DirectionVector: {x: 0, y: 0, z: 0}
 --- !u!1 &1261835134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,12 +1074,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748572967e404fb43b763ea0b2f5a6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AdImage: {fileID: 1524796698}
-  CloseAdButtonGameObject: {fileID: 42171694}
-  AdditionalAdButtonGameObject: {fileID: 483967208}
   FirstAdGameObject: {fileID: 1524796696}
   SecondAdGameObject: {fileID: 1498813244}
   ThirdAdGameObject: {fileID: 167265851}
+  OpenParameter: 
+  CloseParameter: 
 --- !u!1001 &1432442734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1356,17 +1405,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1184174076643988709, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
   m_PrefabInstance: {fileID: 6557394985750884532}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1524796698 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7366965077058058218, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
-  m_PrefabInstance: {fileID: 6557394985750884532}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524796696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1548829700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,12 +1890,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea80ad483bef1d749ac14ff9257071ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseSpeed: 10
-  Speed: 10
-  SpeedMultiplier: 5
-  _speedBoostDelay: 2
   Coins:
     VariableSo: {fileID: 11400000, guid: 555f194a697382249b5100e86296c953, type: 2}
+  _powerUpPrices:
+    _keys: 
+    _values: 
+  SnowmanFillImage: {fileID: 0}
+  IceBucketFillImage: {fileID: 0}
+  AdFillImage: {fileID: 0}
+  OnSnowmanPowerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnIceBucketPowerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdPowerUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1928512997
 MeshRenderer:
   m_ObjectHideFlags: 0
