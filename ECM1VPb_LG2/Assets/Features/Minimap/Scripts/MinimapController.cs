@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ public class MinimapController : MonoBehaviour
     public Transform Player1;
     public Transform Player2;
 
+    public Axis Axis;
+
     private float Player1X;
     private float Player2X;
 
@@ -25,20 +28,71 @@ public class MinimapController : MonoBehaviour
 
     void Update()
     {
-        UpdateDot(Player1, Player1Dot, Player1X);
-        UpdateDot(Player2, Player2Dot, Player2X);
+        switch (Axis)
+        {
+            case Axis.x:
+                UpdateDot(Player1, Player1Dot,  Player1Dot.anchoredPosition.y);
+                UpdateDot(Player2, Player2Dot, Player2Dot.anchoredPosition.y);
+                break;
+            case Axis.y:
+                UpdateDot(Player1, Player1Dot,  Player1Dot.anchoredPosition.x);
+                UpdateDot(Player2, Player2Dot, Player2Dot.anchoredPosition.x);
+                break;
+            case Axis.z:
+                Debug.LogError("Not supported axis");
+                break;
+            case Axis.rx:
+                UpdateDot(Player1, Player1Dot,  Player1Dot.anchoredPosition.y);
+                UpdateDot(Player2, Player2Dot, Player2Dot.anchoredPosition.y);
+                break;
+            case Axis.ry:
+                UpdateDot(Player1, Player1Dot,  Player1Dot.anchoredPosition.x);
+                UpdateDot(Player2, Player2Dot, Player2Dot.anchoredPosition.x);
+                break;
+            case Axis.rz:
+                Debug.LogError("Not supported axis");
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
     }
 
-    void UpdateDot(Transform player, RectTransform dot, float xOffset)
+    void UpdateDot(Transform player, RectTransform dot, float offset)
     {
-        Vector3 raceDirection = EndPoint.position - StartPoint.position;
-        Vector3 playerOffset = player.position - StartPoint.position;
 
-        float progress = Vector3.Dot(playerOffset, raceDirection.normalized) / raceDirection.magnitude;
-        progress = Mathf.Clamp01(progress);
+        float progress = Vector3.Distance(player.position, EndPoint.position) / Vector3.Distance(StartPoint.position, EndPoint.position);
+        Debug.Log(progress);
 
-        float y = (progress - 0.5f) * MinimapRect.rect.height;
 
-        dot.anchoredPosition = new Vector2(xOffset, y);
+        float y;
+        switch (Axis)
+        {
+            case Axis.x:
+                y = (progress - 0.5f) * MinimapRect.rect.width;
+                dot.anchoredPosition = new Vector2(1-y, offset);
+                break;
+            case Axis.y:
+                y = (progress - 0.5f) * MinimapRect.rect.height;
+                dot.anchoredPosition = new Vector2(offset, 1-y);
+                break;
+            case Axis.z:
+                Debug.LogError("Not supported axis");
+                break;
+            case Axis.rx:
+                y = (progress - 0.5f) * MinimapRect.rect.width;
+                dot.anchoredPosition = new Vector2(y, offset);
+                break;
+            case Axis.ry:
+                y = (progress - 0.5f) * MinimapRect.rect.height;
+                dot.anchoredPosition = new Vector2(offset, y);
+                break;
+            case Axis.rz:
+                Debug.LogError("Not supported axis");
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
     }
 }

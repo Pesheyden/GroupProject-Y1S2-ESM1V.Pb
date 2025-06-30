@@ -6,7 +6,7 @@ using NaughtyAttributes;
 using UnityEngine.Rendering;
 using Random = UnityEngine.Random;
 
-[ExecuteInEditMode] [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
+[ExecuteInEditMode] [RequireComponent(typeof(MeshRenderer),typeof(MeshFilter))]
 public class PathCreator : MonoBehaviour
 {
     [SerializeField] private float _baseWidth = 2;
@@ -27,7 +27,7 @@ public class PathCreator : MonoBehaviour
         //Get all children
         var points = GetComponentsInChildren<Transform>().ToList();
         points.RemoveAt(0);
-        if(points.Count < 3) 
+        if(points.Count < 2) 
             return;
 
         //Create Mesh
@@ -90,7 +90,9 @@ public class PathCreator : MonoBehaviour
         mesh.uv = uvList.ToArray();
         mesh.triangles = trianglesList.ToArray();
 
+        mesh.RecalculateNormals();
         GetComponent<MeshFilter>().mesh = mesh;
+
         //Apply material
 
     }

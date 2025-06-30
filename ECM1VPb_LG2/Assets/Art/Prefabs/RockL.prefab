@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5944257131007287241}
   - component: {fileID: 5642812536099595418}
+  - component: {fileID: -5313953989715899053}
   m_Layer: 0
   m_Name: RockL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5944257131007287241
 Transform:
@@ -27,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.45469, y: 0, z: 0.18172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3219764677716419921}
@@ -54,6 +55,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5296845, y: 0.82679516, z: 1.3222415}
   m_Center: {x: -0.0010073185, y: 0.40683004, z: 0}
+--- !u!114 &-5313953989715899053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450220570582721267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb1dcdf0f6cd5d4581737fa48d6649b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stopTime: 0
+  Parameter: 
 --- !u!1 &8068523754498905722
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,7 +85,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3219764677716419921
 Transform:
@@ -118,7 +133,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8212226473263337188, guid: c427005fe6fa6a947a2b59d3a1e855a1, type: 3}
+  - {fileID: 2100000, guid: e8ce7d0ec4a40d645afe29a6ef319ebe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

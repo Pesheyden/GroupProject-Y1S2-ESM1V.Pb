@@ -257,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15.3415985, y: 0}
+  m_AnchoredPosition: {x: -15.341614, y: 0}
   m_SizeDelta: {x: -222.8577, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159772880
@@ -443,7 +443,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338775906
 MonoBehaviour:
@@ -751,7 +751,6 @@ GameObject:
   - component: {fileID: 950827975}
   - component: {fileID: 950827979}
   - component: {fileID: 950827978}
-  - component: {fileID: 950827981}
   - component: {fileID: 950827982}
   - component: {fileID: 950827983}
   m_Layer: 0
@@ -870,33 +869,6 @@ MonoBehaviour:
   _speedBoostDelay: 2
   Coins:
     VariableSo: {fileID: 11400000, guid: 555f194a697382249b5100e86296c953, type: 2}
---- !u!54 &950827981
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950827973}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &950827982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,6 +952,7 @@ MonoBehaviour:
   EndPoint: {fileID: 1395408694}
   Player1: {fileID: 950827977}
   Player2: {fileID: 1928512999}
+  Axis: 0
 --- !u!1 &1375376595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +988,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -10, y: 0}
-  m_SizeDelta: {x: 12, y: 11}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375376597
 MonoBehaviour:
@@ -1096,7 +1069,6 @@ GameObject:
   - component: {fileID: 1928512997}
   - component: {fileID: 1928512996}
   - component: {fileID: 1928512995}
-  - component: {fileID: 1928512994}
   m_Layer: 0
   m_Name: PlayerTwo
   m_TagString: Untagged
@@ -1104,33 +1076,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &1928512994
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928512993}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!136 &1928512995
 CapsuleCollider:
   m_ObjectHideFlags: 0
