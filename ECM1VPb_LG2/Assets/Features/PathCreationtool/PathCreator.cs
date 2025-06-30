@@ -90,7 +90,9 @@ public class PathCreator : MonoBehaviour
         mesh.uv = uvList.ToArray();
         mesh.triangles = trianglesList.ToArray();
 
+        mesh.RecalculateNormals();
         GetComponent<MeshFilter>().mesh = mesh;
+
         //Apply material
 
     }
