@@ -1,6 +1,8 @@
 using System;
+using System.Numerics;
 using BSOAP.Variables;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public enum Axis
 {
@@ -106,12 +108,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void Stop()
     {
-        _rigidbody.linearVelocity = -_rigidbody.linearVelocity * _knockBackMultiplier;
+        _rigidbody.linearVelocity = Vector3.zero;
         _isCanMove = false;
     }
     public void Stop(float duration)
     {
-        _rigidbody.linearVelocity = -_rigidbody.linearVelocity * _knockBackMultiplier ;
+        _rigidbody.linearVelocity = Vector3.zero;
         _isCanMove = false;
         Invoke(nameof(ContinueMovement), duration);
     }

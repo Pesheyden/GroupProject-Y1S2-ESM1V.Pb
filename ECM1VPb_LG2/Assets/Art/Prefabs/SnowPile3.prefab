@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8336784531418235205}
   - component: {fileID: 1267132145731909437}
   - component: {fileID: 8588074281631031879}
+  - component: {fileID: 5512603548140057880}
   m_Layer: 0
   m_Name: pile3
   m_TagString: Untagged
@@ -141,3 +142,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6358883613261038419, guid: c7469c547379dfe4eb8e795f71bf32c7, type: 3}
+--- !u!114 &5512603548140057880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501631918026149895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb1dcdf0f6cd5d4581737fa48d6649b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stopTime: 0
+  Parameter: 
