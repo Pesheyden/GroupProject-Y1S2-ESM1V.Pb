@@ -6,6 +6,7 @@ public class AdPowerupController : MonoBehaviour
     public GameObject FirstAdGameObject;
     public GameObject SecondAdGameObject;
     public GameObject ThirdAdGameObject;
+    public GameObject[] CheckPopUp;
 
     public string OpenParameter;
     public string CloseParameter;
@@ -43,6 +44,8 @@ public class AdPowerupController : MonoBehaviour
         FirstAdGameObject.SetActive(false);
         if (CloseParameter != "")
             FMODUnity.RuntimeManager.CreateInstance(CloseParameter).start();
+        
+        CheckPopUp[Random.Range(0,CheckPopUp.Length - 1)].SetActive(true);
     }
 
     public void DisableSecondAd() {
