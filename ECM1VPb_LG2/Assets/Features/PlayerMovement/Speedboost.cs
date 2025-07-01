@@ -4,6 +4,7 @@ using UnityEngine;
 public class Speedboost : MonoBehaviour
 {
     [SerializeField] private float _multiplier;
+    [SerializeField] private ParticleSystem _particles;
     public string Parameter;
     private void OnTriggerEnter(Collider other)
     {
@@ -11,6 +12,9 @@ public class Speedboost : MonoBehaviour
         {
             if(Parameter != "")
                 FMODUnity.RuntimeManager.CreateInstance(Parameter).start();
+            
+            if(_particles)
+                _particles.Play();
             playerMovement.SpeedUp(_multiplier);
         }
     }

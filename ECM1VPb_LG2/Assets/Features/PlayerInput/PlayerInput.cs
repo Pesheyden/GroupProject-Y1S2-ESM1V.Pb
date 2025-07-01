@@ -41,8 +41,16 @@ public class PlayerInput : MonoBehaviour
 
     private int _fingerId;
     private Vector2 _joyStickSize;
+    private bool _verticalOrientation;
     
     private void Start()
+    {
+        _verticalOrientation = Screen.height > Screen.width;
+
+        SetUp();
+    }
+
+    private void SetUp()
     {
         switch (_inputType)
         {
@@ -120,6 +128,11 @@ public class PlayerInput : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        
+        if(_verticalOrientation && Screen.height < Screen.width)
+            SetUp();
+        else if(!_verticalOrientation && Screen.height > Screen.width)
+            SetUp();
     }
 
     private void HandleJoystickInput()
