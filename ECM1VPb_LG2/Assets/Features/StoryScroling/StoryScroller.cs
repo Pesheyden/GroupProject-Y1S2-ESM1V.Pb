@@ -1,7 +1,7 @@
-using System;
-using System.Collections;
+
 using System.Threading;
-using System.Threading.Tasks;
+using Cysharp.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -95,12 +95,12 @@ public class StoryScroller : MonoBehaviour
         _ = WaitCoroutine(action);
     }
 
-    private async Task WaitCoroutine(UnityEvent action)
+    private async UniTask WaitCoroutine(UnityEvent action)
     {
-        if(_storyAudioBlocks[_nextBlockIndex - 1])
-            await Task.Delay((int)(_storyAudioBlocks[_nextBlockIndex - 1].length * 1000), _cancellationToken);
+        if (_storyAudioBlocks[_nextBlockIndex - 1])
+            await UniTask.Delay((int)(_storyAudioBlocks[_nextBlockIndex - 1].length * 1000),true, PlayerLoopTiming.Update, _cancellationToken);
         else
-            await Task.Delay(_waitTime, _cancellationToken);
+            await UniTask.Delay(_waitTime, true, PlayerLoopTiming.Update, _cancellationToken);
         action.Invoke();
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,12 +14,12 @@ public class ButtonDelay : MonoBehaviour
 
     private void OnEnable()
     {
-        buttonDelay();
+        _ = buttonDelay();
     }
 
-    async Task buttonDelay()
+    async UniTask buttonDelay()
     {
-        await Task.Delay(waitAmount);
+        await UniTask.Delay(waitAmount);
 
         button.SetActive(true);
 
