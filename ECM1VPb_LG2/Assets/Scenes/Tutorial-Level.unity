@@ -14783,6 +14783,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 946861015138584695, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1211567754393208250, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -14815,9 +14819,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1489116882796582818, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
+      propertyPath: m_fontSize
+      value: 70.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1495433255123065987, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558060920682279661, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1883850884742088828, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
       propertyPath: m_Layer
@@ -15184,7 +15196,8 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7021944482974798558, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3574918047068249662, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
       insertIndex: -1
