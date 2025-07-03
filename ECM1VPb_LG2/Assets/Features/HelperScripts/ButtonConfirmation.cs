@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ButtonConfirmation : MonoBehaviour
 {
     public Button ButtonOne;
     public Button ButtonTwo;
+
+    public UnityEvent OnTwoButtonPress;
 
     private bool isButtonOnePressed = false;
     private bool isButtonTwoPressed = false;
@@ -35,6 +38,8 @@ public class ButtonConfirmation : MonoBehaviour
         {
             Debug.Log("Both buttons have been pressed, triggering the event");
             // Trigger your event here
+            
+            OnTwoButtonPress.Invoke();
 
             isButtonOnePressed = false;
             isButtonTwoPressed = false;

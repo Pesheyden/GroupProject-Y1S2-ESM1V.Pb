@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public enum StartType 
@@ -16,16 +19,22 @@ public class StoryScroller : MonoBehaviour
 {
     [SerializeField] private GameObject[] _storyBlocks;
     [SerializeField] private AudioClip[] _storyAudioBlocks;
-    [SerializeField] private float _waitTime;
+    [SerializeField] private int _waitTime;
     [SerializeField] private StartType _startType;
     [SerializeField] private Button _skipButton;
+    [SerializeField] private UnityEvent _onStoryEnd;
 
     private int _nextBlockIndex;
     private Coroutine _waitCoroutine;
+    private CancellationTokenSource _source;
+    private CancellationToken _cancellationToken;
+
     private AudioSource _audioSource;
 
     private void OnEnable()
     {
+        _source = new CancellationTokenSource();
+        _cancellationToken = _source.Token;
         if (_startType == StartType.Enable)
         {
             NextStep();
@@ -53,7 +62,13 @@ public class StoryScroller : MonoBehaviour
 
     private void Skip()
     {
-        StopCoroutine(_waitCoroutine);
+        _source.Cancel();
+        if (_nextBlockIndex - 1 == _storyBlocks.Length - 1)
+        {
+            _onStoryEnd?.Invoke();
+            return;
+        }
+        Debug.Log("Skip");
         NextStep();
     }
 
@@ -61,24 +76,31 @@ public class StoryScroller : MonoBehaviour
     {
         _storyBlocks[_nextBlockIndex].SetActive(true);
         _storyBlocks[_nextBlockIndex].GetComponent<Animation>()?.Play();
+
+        var action = new UnityEvent();
+        action.AddListener(NextStep);
+        
         if (_storyAudioBlocks[_nextBlockIndex])
             _audioSource.PlayOneShot(_storyAudioBlocks[_nextBlockIndex]);
 
+        _nextBlockIndex++;
         if (_nextBlockIndex == _storyBlocks.Length - 1)
         {
+            _ = WaitCoroutine(_onStoryEnd);
             return;
         }
-        _nextBlockIndex++;
 
-        _waitCoroutine = StartCoroutine(WaitCoroutine());
+        
+
+        _ = WaitCoroutine(action);
     }
 
-    private IEnumerator WaitCoroutine()
+    private async Task WaitCoroutine(UnityEvent action)
     {
         if(_storyAudioBlocks[_nextBlockIndex - 1])
-            yield return new WaitForSeconds(_storyAudioBlocks[_nextBlockIndex - 1].length);
+            await Task.Delay((int)(_storyAudioBlocks[_nextBlockIndex - 1].length * 1000), _cancellationToken);
         else
-            yield return new WaitForSeconds(_waitTime);
-        NextStep();
+            await Task.Delay(_waitTime, _cancellationToken);
+        action.Invoke();
     }
 }

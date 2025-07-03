@@ -14,6 +14,12 @@ public enum PowerUpType
     IceBucket,
     Ad,
 }
+
+public enum PlayerSide
+{
+    Bottom,
+    Up,
+}
 public class PlayerController : MonoBehaviour
 {
     [Header("Coins")][Space(10)]
@@ -21,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
     [SaintsDictionary("PowerUp", "Price")]
     [SerializeField] private SaintsDictionary<PowerUpType,int> _powerUpPrices;
+
+    public PlayerSide Side;
 
     public Image SnowmanFillImage;
     public Image IceBucketFillImage;
