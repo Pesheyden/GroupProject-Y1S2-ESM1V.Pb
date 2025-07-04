@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7144436988303687595}
   - component: {fileID: 1754959313233619416}
   - component: {fileID: 5352797760521028272}
+  - component: {fileID: 6819108516219287680}
   m_Layer: 0
   m_Name: RockM
   m_TagString: Untagged
@@ -154,4 +155,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopTime: 0
+  _particles: {fileID: 0}
   Parameter: 
+--- !u!114 &6819108516219287680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592825582712186806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1141944407
+      Data2: 1255232809
+      Data3: 270866606
+      Data4: -1618004649
+    Path: event:/Collision
+  Event: 
+  EventPlayTrigger: 3
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
