@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stopTime: 2
   _particles: {fileID: 0}
-  Parameter: 
+  Parameter: event:/Collision
 --- !u!111 &5267390862462037320
 Animation:
   m_ObjectHideFlags: 0

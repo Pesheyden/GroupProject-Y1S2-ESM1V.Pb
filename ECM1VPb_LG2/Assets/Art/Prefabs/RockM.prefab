@@ -154,4 +154,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopTime: 0
-  Parameter: 
+  _particles: {fileID: 0}
+  Parameter: event:/Collision

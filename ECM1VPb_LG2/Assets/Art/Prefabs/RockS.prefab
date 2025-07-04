@@ -68,7 +68,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopTime: 0
-  Parameter: 
+  _particles: {fileID: 0}
+  Parameter: event:/Collision
 --- !u!1 &7442531849211024546
 GameObject:
   m_ObjectHideFlags: 0

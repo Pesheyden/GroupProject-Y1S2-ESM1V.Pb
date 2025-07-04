@@ -154,7 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _multiplier: 1.5
-  Parameter: 
+  _particles: {fileID: 0}
+  Parameter: event:/SlideUnder
 --- !u!1 &3567090863750755538
 GameObject:
   m_ObjectHideFlags: 0

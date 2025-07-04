@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopTime: 0.2
+  _particles: {fileID: 0}
   Parameter: 
 --- !u!136 &3901757622730147416
 CapsuleCollider:
@@ -85,7 +86,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopTime: 0
-  Parameter: 
+  _particles: {fileID: 0}
+  Parameter: event:/Collision
 --- !u!1 &8363756157724220824
 GameObject:
   m_ObjectHideFlags: 0

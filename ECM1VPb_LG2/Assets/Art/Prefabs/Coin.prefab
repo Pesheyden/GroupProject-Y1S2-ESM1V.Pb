@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1637817288215892146}
   - component: {fileID: 8629028978041468193}
   - component: {fileID: -5008745089106842794}
+  - component: {fileID: 5897957775282770109}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -67,7 +68,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef52a91c4e3eda498fe0ddee791b83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parameter: 
+  Parameter: event:/Coin
+  _particles: {fileID: 0}
+  _animation: {fileID: 2119539868693598396}
+  _respawnTime: 5
+--- !u!111 &5897957775282770109
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267569724414530088}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: fd715e329681a9f41a72acb34fd14f7a, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fd715e329681a9f41a72acb34fd14f7a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1001 &8754901000231721856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,8 +148,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5cef61fd83e3a04fbf89e35ab4db4f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2119539868693598396}
   m_SourcePrefab: {fileID: 100100000, guid: e5cef61fd83e3a04fbf89e35ab4db4f1, type: 3}
+--- !u!1 &8484431790848288465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e5cef61fd83e3a04fbf89e35ab4db4f1, type: 3}
+  m_PrefabInstance: {fileID: 8754901000231721856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &2119539868693598396
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8484431790848288465}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 3e06de5580daf614b93a4b2b8eadeff0, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3e06de5580daf614b93a4b2b8eadeff0, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!4 &9148237384301378667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e5cef61fd83e3a04fbf89e35ab4db4f1, type: 3}

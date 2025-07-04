@@ -24,7 +24,7 @@ public class CameraShake : MonoBehaviour
             float yPosition = Random.Range(-1f * magnitude, 1f * magnitude);
             transform.localPosition = new Vector3(xPosition, yPosition, originalPosition.z);
 
-            transform.Rotate(rotationVector * RotationSpeed);
+            //transform.Rotate(rotationVector * RotationSpeed);
 
             elapsed += Time.deltaTime;
 
