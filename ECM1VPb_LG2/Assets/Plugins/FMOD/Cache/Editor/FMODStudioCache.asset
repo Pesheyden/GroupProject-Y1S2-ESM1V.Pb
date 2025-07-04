@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: Snowdown/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638872215543028497
+  lastModified: 638872307901023102
   FileSizes:
   - Name: Desktop
     Value: 1190
@@ -132,7 +132,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -6718369339643869199}
   cacheVersion: 131848
-  cacheTime: 638872215543028497
+  cacheTime: 638872307901023102
   SerializableEventsDict:
   - key: event:/Snowman
     index: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   Path: Snowdown/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638872215543028497
+  lastModified: 638872307901007905
   FileSizes:
   - Name: Desktop
     Value: 614880
