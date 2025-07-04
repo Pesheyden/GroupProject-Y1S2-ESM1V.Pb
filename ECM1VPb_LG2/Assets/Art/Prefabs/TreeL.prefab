@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8504922223105998347}
   - component: {fileID: 4472942708392681901}
-  - component: {fileID: 750629734979221730}
   - component: {fileID: 3131146246814359837}
   m_Layer: 0
   m_Name: TreeL
@@ -58,21 +57,6 @@ CapsuleCollider:
   m_Height: 4.129
   m_Direction: 1
   m_Center: {x: 0, y: 2.059, z: 0}
---- !u!114 &750629734979221730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3949188384691716779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb1dcdf0f6cd5d4581737fa48d6649b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stopTime: 0
-  _particles: {fileID: 0}
-  Parameter: 
 --- !u!114 &3131146246814359837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +64,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3949188384691716779}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 

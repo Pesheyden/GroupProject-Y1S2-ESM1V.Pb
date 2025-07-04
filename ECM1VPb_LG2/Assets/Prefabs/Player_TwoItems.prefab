@@ -257,10 +257,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667314129742478519}
-        m_TargetAssemblyTypeName: AdPowerupController, Assembly-CSharp
-        m_MethodName: ActivateAnAd
+      - m_Target: {fileID: 8964343575423380103}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4827125989567454662}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -354,6 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 746922828603580431}
+  - component: {fileID: 8964343575423380103}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -387,6 +400,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8964343575423380103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457646311590681241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1582224507
+      Data2: 1233888404
+      Data3: 2115664802
+      Data4: -1421749136
+    Path: event:/Click
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &850671648637455800
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +779,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7921580546060351312}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 7047931094312271266}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1757,6 +1813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2485711729450760820}
   - component: {fileID: 8613023758722126896}
+  - component: {fileID: 7334314057571279065}
   m_Layer: 0
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1841,6 +1898,61 @@ MonoBehaviour:
           m_StringArgument: Ad
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7334314057571279065}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7334314057571279065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950460191224407221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1582224507
+      Data2: 1233888404
+      Data3: 2115664802
+      Data4: -1421749136
+    Path: event:/Click
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2012676479232005593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,6 +2101,69 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!1 &2020442659906829067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5729693569077280563}
+  - component: {fileID: 7789437267770498951}
+  m_Layer: 0
+  m_Name: Ambience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5729693569077280563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020442659906829067}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -26669.295, y: -0.00012, z: 33199.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4509617976214514943}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7789437267770498951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020442659906829067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 178994474
+      Data2: 1141843447
+      Data3: -1343504204
+      Data4: 1001964169
+    Path: event:/AmbienceInGame
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2025096328488290586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,10 +2319,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1164880088393782396}
-        m_TargetAssemblyTypeName: AdPowerupController, Assembly-CSharp
-        m_MethodName: ActivateAnAd
+      - m_Target: {fileID: 7921580546060351312}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5068836785684385449}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2361,6 +2548,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8964343575423380103}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4668574803648823059}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -2534,6 +2733,8 @@ GameObject:
   m_Component:
   - component: {fileID: 392803707898749802}
   - component: {fileID: 7270686954617465294}
+  - component: {fileID: 4871545941178676969}
+  - component: {fileID: 8101136748573316610}
   m_Layer: 0
   m_Name: Button (1)
   m_TagString: Untagged
@@ -2618,6 +2819,92 @@ MonoBehaviour:
           m_StringArgument: IceBucket
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4871545941178676969}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8101136748573316610}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4871545941178676969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674117823937512884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1582224507
+      Data2: 1233888404
+      Data3: 2115664802
+      Data4: -1421749136
+    Path: event:/Click
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &8101136748573316610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674117823937512884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 569404831
+      Data2: 1307466543
+      Data3: 49153939
+      Data4: 449286522
+    Path: event:/IceBucket
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2721071640124058296
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,10 +3386,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1164880088393782396}
-        m_TargetAssemblyTypeName: AdPowerupController, Assembly-CSharp
-        m_MethodName: ActivateAnAd
+      - m_Target: {fileID: 7921580546060351312}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8353886245037660413}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3380,6 +3679,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7921580546060351312}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5068836785684385449}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3998,10 +4309,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667314129742478519}
-        m_TargetAssemblyTypeName: AdPowerupController, Assembly-CSharp
-        m_MethodName: ActivateAnAd
+      - m_Target: {fileID: 8964343575423380103}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7838022148643269861}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4525,6 +4848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6183929151213982548}
   - component: {fileID: 2077991213663494523}
+  - component: {fileID: 5641251658513459374}
   m_Layer: 0
   m_Name: Button (2)
   m_TagString: Untagged
@@ -4609,6 +4933,49 @@ MonoBehaviour:
           m_StringArgument: Ad
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7334314057571279065}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5641251658513459374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866329508967500532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1582224507
+      Data2: 1233888404
+      Data3: 2115664802
+      Data4: -1421749136
+    Path: event:/Click
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &3977343365859721804
 GameObject:
   m_ObjectHideFlags: 0
@@ -4802,10 +5169,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667314129742478519}
-        m_TargetAssemblyTypeName: AdPowerupController, Assembly-CSharp
-        m_MethodName: ActivateAnAd
+      - m_Target: {fileID: 8964343575423380103}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5046567577587131386}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4947,10 +5326,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1164880088393782396}
-        m_TargetAssemblyTypeName: AdPowerupController, Assembly-CSharp
-        m_MethodName: ActivateAnAd
+      - m_Target: {fileID: 7921580546060351312}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6220255896564040146}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5892,6 +6283,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3574918047068249662}
   - component: {fileID: 1351221303393353249}
+  - component: {fileID: 3490274465045192440}
+  - component: {fileID: 6811066431532350785}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -5976,6 +6369,92 @@ MonoBehaviour:
           m_StringArgument: Snowman
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3490274465045192440}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6811066431532350785}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3490274465045192440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883938206057874464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1582224507
+      Data2: 1233888404
+      Data3: 2115664802
+      Data4: -1421749136
+    Path: event:/Click
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &6811066431532350785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883938206057874464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1608741371
+      Data2: 1181702453
+      Data3: 1358807453
+      Data4: 847647098
+    Path: event:/Snowman
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &4938436881450814602
 GameObject:
   m_ObjectHideFlags: 0
@@ -6794,6 +7273,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8964343575423380103}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5046567577587131386}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -6816,6 +7307,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2521563313118843906}
   - component: {fileID: 6095259223455814556}
+  - component: {fileID: 4136806405946060377}
+  - component: {fileID: 2396033803853630816}
   m_Layer: 0
   m_Name: Button (1)
   m_TagString: Untagged
@@ -6900,6 +7393,92 @@ MonoBehaviour:
           m_StringArgument: IceBucket
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4136806405946060377}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2396033803853630816}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4136806405946060377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130966747131984741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1582224507
+      Data2: 1233888404
+      Data3: 2115664802
+      Data4: -1421749136
+    Path: event:/Click
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2396033803853630816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130966747131984741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 569404831
+      Data2: 1307466543
+      Data3: 49153939
+      Data4: 449286522
+    Path: event:/IceBucket
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5221017451490385290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7292,6 +7871,7 @@ GameObject:
   - component: {fileID: 7747583693328592389}
   - component: {fileID: 5794871132765433168}
   - component: {fileID: 6997099060302692281}
+  - component: {fileID: 676819539236132035}
   m_Layer: 0
   m_Name: Main Camera Player 1
   m_TagString: MainCamera
@@ -7360,7 +7940,7 @@ Camera:
     height: 0.5
   near clip plane: 0.15
   far clip plane: 1000
-  field of view: 90
+  field of view: 85
   orthographic: 0
   orthographic size: 12
   m_Depth: -1
@@ -7444,6 +8024,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!114 &676819539236132035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439574353612877331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f86827e3cc0f448b92a8cfb8ced4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 0.01
+  Magnitude: 0.1
+  rotationVector: {x: 0, y: 100, z: 0}
+  RotationSpeed: 0
 --- !u!1 &5589329219397612759
 GameObject:
   m_ObjectHideFlags: 0
@@ -7737,6 +8333,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8964343575423380103}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 7838022148643269861}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -7970,6 +8578,8 @@ GameObject:
   m_Component:
   - component: {fileID: 254862148687675003}
   - component: {fileID: 7374003630031917616}
+  - component: {fileID: 7797430919412222850}
+  - component: {fileID: 1956622791560307286}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -8054,6 +8664,92 @@ MonoBehaviour:
           m_StringArgument: Snowman
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7797430919412222850}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956622791560307286}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7797430919412222850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824605912736038535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1582224507
+      Data2: 1233888404
+      Data3: 2115664802
+      Data4: -1421749136
+    Path: event:/Click
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1956622791560307286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824605912736038535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1608741371
+      Data2: 1181702453
+      Data3: 1358807453
+      Data4: 847647098
+    Path: event:/Snowman
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6141039701458751046
 GameObject:
   m_ObjectHideFlags: 0
@@ -8830,6 +9526,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7921580546060351312}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 8353886245037660413}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -8963,6 +9671,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   _maxSpeed: 400
   _knockBackMultiplier: 0.4
+  _camera: {fileID: 2940150091207994847}
+  _fovRange: {x: 85, y: 95}
+  _fovChangeSpeed: 0
   _isCanMove: 0
 --- !u!54 &6258829357062161420
 Rigidbody:
@@ -9004,7 +9715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Coins:
-    VariableSo: {fileID: 11400000, guid: 555f194a697382249b5100e86296c953, type: 2}
+    VariableSo: {fileID: 11400000, guid: 455205e1be20e7340b57e563ced2eb35, type: 2}
   _powerUpPrices:
     _keys: 000000000100000002000000
     _values: 010000000200000003000000
@@ -9250,7 +9961,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2263176556832132810}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadSceneWithIndex
         m_Mode: 3
@@ -9781,6 +10492,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   _maxSpeed: 400
   _knockBackMultiplier: 0.4
+  _camera: {fileID: 5394116461503281482}
+  _fovRange: {x: 85, y: 95}
+  _fovChangeSpeed: 0
   _isCanMove: 0
 --- !u!54 &7563393732681775981
 Rigidbody:
@@ -9884,6 +10598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4949982279287458696}
+  - component: {fileID: 7921580546060351312}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -9917,6 +10632,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7921580546060351312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405689877781491854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1582224507
+      Data2: 1233888404
+      Data3: 2115664802
+      Data4: -1421749136
+    Path: event:/Click
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7677297390034375043
 GameObject:
   m_ObjectHideFlags: 0
@@ -10113,6 +10859,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7921580546060351312}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6220255896564040146}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -10371,6 +11129,7 @@ Transform:
   - {fileID: 519386843145232454}
   - {fileID: 3636348924989478553}
   - {fileID: 3938403562233024855}
+  - {fileID: 5729693569077280563}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7737181584221311739
@@ -11342,10 +12101,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667314129742478519}
-        m_TargetAssemblyTypeName: AdPowerupController, Assembly-CSharp
-        m_MethodName: ActivateAnAd
+      - m_Target: {fileID: 8964343575423380103}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4668574803648823059}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11487,10 +12258,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1164880088393782396}
-        m_TargetAssemblyTypeName: AdPowerupController, Assembly-CSharp
-        m_MethodName: ActivateAnAd
+      - m_Target: {fileID: 7921580546060351312}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7047931094312271266}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11525,6 +12308,7 @@ GameObject:
   - component: {fileID: 1496163791105565918}
   - component: {fileID: 7668374682803607819}
   - component: {fileID: 1322158378061293095}
+  - component: {fileID: 3802623272893815667}
   m_Layer: 0
   m_Name: Main Camera Player 2
   m_TagString: MainCamera
@@ -11593,7 +12377,7 @@ Camera:
     height: 0.5
   near clip plane: 0.15
   far clip plane: 1000
-  field of view: 90
+  field of view: 85
   orthographic: 0
   orthographic size: 12
   m_Depth: -1
@@ -11677,6 +12461,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!114 &3802623272893815667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645871233763693416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f86827e3cc0f448b92a8cfb8ced4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 0.01
+  Magnitude: 0.1
+  rotationVector: {x: 0, y: 100, z: 0}
+  RotationSpeed: 0
 --- !u!1 &8650017074410759957
 GameObject:
   m_ObjectHideFlags: 0
@@ -11798,6 +12598,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8964343575423380103}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4827125989567454662}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -12488,20 +13300,84 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8964343575423380103}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2667314129742478519}
     - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: DisableSecondAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 8964343575423380103}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 2667314129742478519}
     - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ActivateThirdAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5429753639233055280, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_Color.a
@@ -12534,7 +13410,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2467254393113266782}
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5111393932231535006}
   m_SourcePrefab: {fileID: 100100000, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
 --- !u!224 &209509223152800088 stripped
 RectTransform:
@@ -12546,6 +13428,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1511904854051597693, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
   m_PrefabInstance: {fileID: 1335136467930285501}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2467254393113266782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467256155744807104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1950004313
+      Data2: 1253413006
+      Data3: 1813729185
+      Data4: -1278269839
+    Path: event:/AdPopup
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!111 &5111393932231535006
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467256155744807104}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1001 &1366036942970481684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12737,20 +13667,84 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7921580546060351312}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1164880088393782396}
     - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: DisableSecondAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 7921580546060351312}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 1164880088393782396}
     - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ActivateThirdAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5429753639233055280, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
       propertyPath: m_Color.a
@@ -12779,13 +13773,67 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1012613140778403887}
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6130265894356738034}
   m_SourcePrefab: {fileID: 100100000, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
 --- !u!1 &3473945675378546951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1511904854051597693, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
   m_PrefabInstance: {fileID: 2652253338004780154}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1012613140778403887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3473945675378546951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1950004313
+      Data2: 1253413006
+      Data3: 1813729185
+      Data4: -1278269839
+    Path: event:/AdPopup
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!111 &6130265894356738034
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3473945675378546951}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!224 &3792517246808039583 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1184174076643988709, guid: 62c3b3c505f2f31498b9299c4277a665, type: 3}
@@ -12892,20 +13940,84 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7921580546060351312}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1164880088393782396}
     - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: DisableFirstAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 7921580546060351312}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 1164880088393782396}
     - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ActivateSecondAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5429753639233055280, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_Color.a
@@ -12934,7 +14046,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5933987828767389174}
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4613360985044455768}
   m_SourcePrefab: {fileID: 100100000, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
 --- !u!224 &5776244062076872798 stripped
 RectTransform:
@@ -12946,6 +14064,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1511904854051597693, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
   m_PrefabInstance: {fileID: 4631494075115797691}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5933987828767389174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106039035664617926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1950004313
+      Data2: 1253413006
+      Data3: 1813729185
+      Data4: -1278269839
+    Path: event:/AdPopup
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!111 &4613360985044455768
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106039035664617926}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1001 &6072349076339247424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13571,12 +14737,72 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8964343575423380103}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2667314129742478519}
     - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: DisableThirdAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8964343575423380103}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5429753639233055280, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
       propertyPath: m_Color.a
@@ -13605,13 +14831,67 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2479063030890866390}
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6111934600426768318}
   m_SourcePrefab: {fileID: 100100000, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
 --- !u!1 &8807845074920316364 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1511904854051597693, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
   m_PrefabInstance: {fileID: 7980551273363779761}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2479063030890866390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807845074920316364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1950004313
+      Data2: 1253413006
+      Data3: 1813729185
+      Data4: -1278269839
+    Path: event:/AdPopup
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!111 &6111934600426768318
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807845074920316364}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!224 &9128678890455491668 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1184174076643988709, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
@@ -13796,20 +15076,84 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8964343575423380103}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2667314129742478519}
     - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: DisableFirstAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 8964343575423380103}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 2667314129742478519}
     - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ActivateSecondAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5429753639233055280, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
       propertyPath: m_Color.a
@@ -13838,7 +15182,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1174135395582779411}
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2229259962205266829}
   m_SourcePrefab: {fileID: 100100000, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
 --- !u!224 &7552801741971260789 stripped
 RectTransform:
@@ -13850,6 +15200,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1511904854051597693, guid: 036ef06b1f382e24e9712821b899b839, type: 3}
   m_PrefabInstance: {fileID: 8700946949117923728}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1174135395582779411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7801541129834233069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1950004313
+      Data2: 1253413006
+      Data3: 1813729185
+      Data4: -1278269839
+    Path: event:/AdPopup
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!111 &2229259962205266829
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7801541129834233069}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1001 &8702850980446188781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13951,12 +15349,72 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7921580546060351312}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1164880088393782396}
     - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: DisableThirdAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdPowerupController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387633851024197618, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7921580546060351312}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974403208716187374, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5429753639233055280, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
       propertyPath: m_Color.a
@@ -13981,7 +15439,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5380432282876897857}
+    - targetCorrespondingSourceObject: {fileID: 1511904854051597693, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2027699401721062737}
   m_SourcePrefab: {fileID: 100100000, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
 --- !u!224 &7541757886791213064 stripped
 RectTransform:
@@ -13993,3 +15457,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1511904854051597693, guid: 91b0c54a84723b944a26207a2533d110, type: 3}
   m_PrefabInstance: {fileID: 8702850980446188781}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5380432282876897857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799638272103717264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1950004313
+      Data2: 1253413006
+      Data3: 1813729185
+      Data4: -1278269839
+    Path: event:/AdPopup
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!111 &2027699401721062737
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799638272103717264}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3afa156535524724f8f06dcd16560729, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0

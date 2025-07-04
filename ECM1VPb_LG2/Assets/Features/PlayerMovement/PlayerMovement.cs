@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Numerics;
 using BSOAP.Variables;
 using UnityEngine;
@@ -24,9 +25,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AnimationCurve _speedLinearDampingCurve;
     [SerializeField] private float _maxSpeed;
     [SerializeField] private float _knockBackMultiplier;
+    [SerializeField] private Camera _camera;
+    [SerializeField] private Vector2Int _fovRange;
+    [SerializeField] private float _fovChangeSpeed;
     
     private bool _inverseForward;
     public bool _isCanMove;
+    private float _targetFOV;
     
     private Rigidbody _rigidbody;
     private Vector3 _forwardDirection;
@@ -36,6 +41,12 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _isCanMove = true;
+        _targetFOV = _camera.fieldOfView;
+    }
+
+    private void Update()
+    {
+        _camera.fieldOfView = Mathf.Lerp(_camera.fieldOfView, _targetFOV, _fovChangeSpeed * Time.deltaTime);
     }
 
     public void FixedUpdate()
@@ -45,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
         
         if(_isCanMove)
             Move();
+
+        _targetFOV = Mathf.Lerp(_fovRange.x, _fovRange.y, _rigidbody.linearVelocity.sqrMagnitude / _maxSpeed);
     }
 
     private void Rotate()

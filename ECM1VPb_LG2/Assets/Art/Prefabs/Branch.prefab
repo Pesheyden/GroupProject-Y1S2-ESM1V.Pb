@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 533636519859054352}
   - component: {fileID: 7567834066962871777}
   - component: {fileID: 9012848541471897838}
-  - component: {fileID: 9087409699951587829}
   m_Layer: 0
   m_Name: Branch
   m_TagString: Untagged
@@ -70,38 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stopTime: 0
   _particles: {fileID: 0}
-  Parameter: 
---- !u!114 &9087409699951587829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801903111974653049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1141944407
-      Data2: 1255232809
-      Data3: 270866606
-      Data4: -1618004649
-    Path: event:/Collision
-  Event: 
-  EventPlayTrigger: 3
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  Parameter: event:/Collision
 --- !u!1001 &2544610383606211979
 PrefabInstance:
   m_ObjectHideFlags: 0
