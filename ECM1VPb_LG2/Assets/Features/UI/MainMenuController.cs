@@ -68,7 +68,7 @@ public class MainMenuController : MonoBehaviour
     public void StartFreePlay()
     {
         OnStartFreePlay?.Invoke();
-        _sceneLoader.StartRandomScene(_freePlaySceneRange);
+        //_sceneLoader.StartRandomScene(_freePlaySceneRange);
     }
 
     public void OpenSettings()
