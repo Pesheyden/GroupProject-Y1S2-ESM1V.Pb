@@ -9564,7 +9564,7 @@ GameObject:
   - component: {fileID: 5839045593199572671}
   m_Layer: 0
   m_Name: Player1 (Bottom)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9602,7 +9602,7 @@ MonoBehaviour:
   _speed: 800
   _rotationSpeed: 100
   _moveInput:
-    VariableSo: {fileID: 11400000, guid: 7bdf1217995324346817f88ea6f5983d, type: 2}
+    VariableSo: {fileID: 11400000, guid: 0f0fca9487bec5f4c9cb809c58c5c72a, type: 2}
   _angleLinearDampingCurve:
     serializedVersion: 2
     m_Curve:
@@ -10385,7 +10385,7 @@ GameObject:
   - component: {fileID: 5212801188055364007}
   m_Layer: 0
   m_Name: Player2 (Top)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14319,7 +14319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3497620388142310514, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75
+      value: -75.00003
       objectReference: {fileID: 0}
     - target: {fileID: 3584044093126447924, guid: 5531d4a4e67e0ac4dbbf1eea67a53d62, type: 3}
       propertyPath: m_AnchorMax.x
