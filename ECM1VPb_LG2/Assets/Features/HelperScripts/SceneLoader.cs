@@ -12,8 +12,13 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(index);
     }
 
+    public void StartRandomScene(Vector2Int range)
+    {
+        SceneManager.LoadScene(Random.Range(range.x, range.y));
+    }
+
     public void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Maybe for a restart feature?
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 }

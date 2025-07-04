@@ -8,6 +8,8 @@ public class MainMenuController : MonoBehaviour
     [Header("GameStart")]
     public UnityEvent OnStartCampaign;
     public UnityEvent OnStartFreePlay;
+    [SerializeField] private SceneLoader _sceneLoader;
+    [SerializeField] private Vector2Int _freePlaySceneRange;
     
     [Header("Settings")]
     public UnityEvent OnOpenSettings;
@@ -66,6 +68,7 @@ public class MainMenuController : MonoBehaviour
     public void StartFreePlay()
     {
         OnStartFreePlay?.Invoke();
+        _sceneLoader.StartRandomScene(_freePlaySceneRange);
     }
 
     public void OpenSettings()

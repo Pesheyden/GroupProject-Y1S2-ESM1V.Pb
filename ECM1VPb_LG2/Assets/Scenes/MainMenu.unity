@@ -4581,7 +4581,21 @@ MonoBehaviour:
         m_CallState: 2
   OnStartFreePlay:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908308953}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _sceneLoader: {fileID: 1908308954}
+  _freePlaySceneRange: {x: 0, y: 0}
   OnOpenSettings:
     m_PersistentCalls:
       m_Calls:
