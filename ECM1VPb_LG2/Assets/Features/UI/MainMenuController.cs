@@ -22,26 +22,39 @@ public class MainMenuController : MonoBehaviour
     public UnityEvent OnOpenStoryRecap;
     public UnityEvent OnCloseStoryRecap;
 
+    [Header("FMODBuses")] 
+    [SerializeField] private string _mainBusName;
+    [SerializeField] private string _sfxBusName;
+    [SerializeField] private string _musicBusName;
+
+    private FMOD.Studio.Bus _mainBus;
+    private FMOD.Studio.Bus _sfxBus;
+    private FMOD.Studio.Bus _musicBus;
+
     private void Awake()
     {
         MasterVolumeSlider.onValueChanged.AddListener(OnMasterSliderChange);
         SfxVolumeSlider.onValueChanged.AddListener(OnSfxSliderChange);
         MusicVolumeSlider.onValueChanged.AddListener(OnMusicSliderChange);
+
+        _mainBus = FMODUnity.RuntimeManager.GetBus(_mainBusName);
+        _sfxBus = FMODUnity.RuntimeManager.GetBus(_sfxBusName);
+        _musicBus = FMODUnity.RuntimeManager.GetBus(_musicBusName);
     }
 
     private void OnMasterSliderChange(float value)
     {
-        //Write logic for volume change
+        _mainBus.setVolume(value);
     }
     
     private void OnSfxSliderChange(float value)
     {
-        //Write logic for volume change
+        _sfxBus.setVolume(value);
     }
     
     private void OnMusicSliderChange(float value)
     {
-        //Write logic for volume change
+        _musicBus.setVolume(value);
     }
     
 

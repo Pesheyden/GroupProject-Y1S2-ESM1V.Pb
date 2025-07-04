@@ -60,6 +60,11 @@ public class StoryScroller : MonoBehaviour
         }
     }
 
+    public void StartStory()
+    {
+        NextStep();
+    }
+
     private void Skip()
     {
         _source.Cancel();

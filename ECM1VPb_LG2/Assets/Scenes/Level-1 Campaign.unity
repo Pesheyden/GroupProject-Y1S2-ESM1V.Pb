@@ -12141,7 +12141,7 @@ PrefabInstance:
     - target: {fileID: 918910121598314423, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
       propertyPath: _moveInput.VariableSo
       value: 
-      objectReference: {fileID: 11400000, guid: 0f0fca9487bec5f4c9cb809c58c5c72a, type: 2}
+      objectReference: {fileID: 11400000, guid: 7bdf1217995324346817f88ea6f5983d, type: 2}
     - target: {fileID: 2485711729450760820, guid: 5d598ef65de4d474998e86dddd436652, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

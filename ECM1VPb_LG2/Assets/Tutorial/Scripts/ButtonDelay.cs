@@ -19,7 +19,7 @@ public class ButtonDelay : MonoBehaviour
 
     async UniTask buttonDelay()
     {
-        await UniTask.Delay(waitAmount);
+        await UniTask.Delay(waitAmount, true);
 
         button.SetActive(true);
 

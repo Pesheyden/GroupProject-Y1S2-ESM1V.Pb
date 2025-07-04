@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4450497787886761265}
   - component: {fileID: 7220232645633119262}
-  - component: {fileID: 7250486617893859674}
+  - component: {fileID: 5267390862462037320}
+  - component: {fileID: 3173906898051466150}
   m_Layer: 0
   m_Name: Snowman
   m_TagString: Untagged
@@ -48,9 +49,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopTime: 2
+  _particles: {fileID: 0}
   Parameter: 
---- !u!136 &7250486617893859674
-CapsuleCollider:
+--- !u!111 &5267390862462037320
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184047826386712184}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 8158df1fcd2d479459d37e9401fc0aa1, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8158df1fcd2d479459d37e9401fc0aa1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!65 &3173906898051466150
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -67,11 +86,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.74, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &1606399202231162986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,7 +119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6856868633423291461, guid: 4f04cbe7971bb05448bdeee4768745f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.021
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6856868633423291461, guid: 4f04cbe7971bb05448bdeee4768745f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -176,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6856868633423291461, guid: 4f04cbe7971bb05448bdeee4768745f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.021
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6856868633423291461, guid: 4f04cbe7971bb05448bdeee4768745f5, type: 3}
       propertyPath: m_LocalPosition.z
